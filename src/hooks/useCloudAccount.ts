@@ -106,6 +106,17 @@ export function useCloudAccount(options: CloudAccountOptions) {
     };
   }, []);
 
+  const applyRemote = useCallback((remote: CloudWorkspace) => {
+    revision.current = remote.revision;
+    baseline.current = JSON.stringify(remote.payload);
+    applyingRemote.current = baseline.current;
+    active.current = true;
+    live.current.replaceData(remote.payload);
+    setPendingRemote(null);
+    setMessage("");
+    setStatus("synced");
+  }, []);
+
   useEffect(() => {
     const connection = getCloudClient();
     if (!connection || !user || options.scope !== user.id) return;
@@ -118,6 +129,27 @@ export function useCloudAccount(options: CloudAccountOptions) {
       .then((remote) => {
         if (token !== generation.current) return;
         revision.current = remote?.revision ?? null;
+        const local = live.current.data;
+        // The account is the source of truth. Only ask when this device holds real,
+        // different work that would otherwise be lost.
+        const localHasWork =
+          !local.profile.isDemo &&
+          Boolean(
+            local.profile.name.trim() ||
+              local.saved.length ||
+              local.essays.length ||
+              local.applications.length ||
+              local.profile.activityEntries?.length,
+          );
+        if (remote && (!localHasWork || JSON.stringify(remote.payload) === JSON.stringify(local))) {
+          applyRemote(remote);
+          return;
+        }
+        if (!remote) {
+          // First sign-in: whatever is open becomes the account's progress.
+          void save(local);
+          return;
+        }
         setPendingRemote(remote);
         setStatus("choice");
       })
@@ -253,14 +285,7 @@ export function useCloudAccount(options: CloudAccountOptions) {
       !["choice", "conflict"].includes(status)
     )
       return;
-    revision.current = pendingRemote.revision;
-    baseline.current = JSON.stringify(pendingRemote.payload);
-    applyingRemote.current = baseline.current;
-    active.current = true;
-    live.current.replaceData(pendingRemote.payload);
-    setPendingRemote(null);
-    setMessage("");
-    setStatus("synced");
+    applyRemote(pendingRemote);
   };
   const useLocal = () => {
     if (["choice", "conflict"].includes(status)) void save(live.current.data);

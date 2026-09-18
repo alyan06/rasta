@@ -31,7 +31,7 @@ Official setup references: [Supabase Google authentication](https://supabase.com
 ## How sync protects existing work
 
 - The app waits for the initial authenticated account load before allowing a cloud save.
-- First sign-in and later sign-ins show an explicit choice before cloud data is uploaded or replaces local data. Both versions can be backed up using the account panel.
+- **The account is the source of truth.** On sign-in the saved account copy loads automatically, so a student sees the same progress on every device. First sign-in uploads whatever is open without asking. The only time the app asks is when this device holds real, *different* work that would be lost (a guest profile built before signing in to an account that already has one) or when another tab/device saved newer changes mid-session. Both versions can still be backed up from the account panel.
 - Browser workspace storage is separate for the guest and each account. Logging out restores the guest workspace; a different account never inherits the previous account's data.
 - Changes save after a short delay once the account copy has been chosen. Offline/network errors pause cloud saving and retain the device copy.
 - Each write carries the authenticated account ID and the revision loaded by that tab. The server checks both; stale revisions cannot silently overwrite newer work. A conflict requires choosing the latest account copy or the current device copy. There is no automatic field merge.

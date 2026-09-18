@@ -628,11 +628,10 @@ export default function App() {
             </button>
           </div>
           <p>
-            Your work is saved in this browser
             {account.user
-              ? " and can sync to your signed-in account"
-              : ". Sign in to connect cloud saving"}
-            . Export a backup before clearing browser data.
+              ? "Your progress is saved to your Google account and follows you to any device. A copy is also kept in this browser."
+              : "Your progress is saved in this browser. Sign in with Google to keep it with your account instead."}{" "}
+            Export a backup before clearing browser data.
           </p>
           <div className="stack">
             {persistenceBlocked && (

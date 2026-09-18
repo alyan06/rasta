@@ -86,20 +86,24 @@ export default function AccountPanel({ account }: { account: CloudAccount }) {
             <div className="account-choice stack">
               <div>
                 <h3>
-                  {account.pendingRemote
-                    ? "Which progress would you like to keep?"
-                    : "Save your progress to this account?"}
+                  {account.status === "conflict"
+                    ? "Your account was updated somewhere else"
+                    : account.pendingRemote
+                      ? "Your account already has saved progress"
+                      : "Save your progress to this account?"}
                 </h3>
                 <p>
-                  {account.pendingRemote
-                    ? "Nothing has been replaced. Download a backup first if you want to keep both versions."
-                    : "This uploads the profile currently open on this device. Future changes will save to your account."}
+                  {account.status === "conflict"
+                    ? "Another tab or device saved newer changes. Load them, or keep what is open here."
+                    : account.pendingRemote
+                      ? "What is open on this device is different. Choose which one to keep; the other is replaced. Download a backup first if you want both."
+                      : "Whatever is open right now becomes your account’s progress and follows you to any device."}
                 </p>
               </div>
               {account.pendingRemote && (
                 <div className="account-version">
                   <div>
-                    <strong>Your account copy</strong>
+                    <strong>{account.status === "conflict" ? "Newer version in your account" : "Saved in your account"}</strong>
                     <p>{description(account.pendingRemote.payload)}</p>
                     <small>
                       Saved{" "}
@@ -113,13 +117,13 @@ export default function AccountPanel({ account }: { account: CloudAccount }) {
                     className="button"
                     onClick={account.useRemote}
                   >
-                    Use account copy
+                    {account.status === "conflict" ? "Load the newer version" : "Use my account’s progress"}
                   </button>
                 </div>
               )}
               <div className="account-version">
                 <div>
-                  <strong>This device’s copy</strong>
+                  <strong>Open on this device</strong>
                   <p>{description(account.pendingLocal)}</p>
                 </div>
                 <button
@@ -127,22 +131,24 @@ export default function AccountPanel({ account }: { account: CloudAccount }) {
                   className={`button ${account.pendingRemote ? "secondary" : ""}`}
                   onClick={account.useLocal}
                 >
-                  {account.pendingRemote
-                    ? "Use device copy"
-                    : "Save to my account"}
+                  {account.status === "conflict"
+                    ? "Keep what is open here"
+                    : account.pendingRemote
+                      ? "Replace with this device’s progress"
+                      : "Save to my account"}
                 </button>
               </div>
               {account.pendingRemote && (
                 <p className="muted">
-                  Choosing the device copy replaces the saved account copy.
-                  Choosing the account copy replaces what is open here.
+                  Whichever you choose becomes the single copy saved to your Google account.
                 </p>
               )}
             </div>
           )}
           {account.status === "synced" && (
             <p>
-              Your changes save automatically while you’re online. On a shared
+              Everything you change saves to your Google account automatically,
+              so you see the same progress wherever you sign in. On a shared
               device, sign out when you finish.
             </p>
           )}
@@ -179,7 +185,7 @@ export default function AccountPanel({ account }: { account: CloudAccount }) {
           )
         }
       >
-        <DownloadSimple size={18} aria-hidden="true" /> Download device backup
+        <DownloadSimple size={18} aria-hidden="true" /> Download a backup file
       </button>
       <p className="muted">
         Read our <a href="#privacy">Privacy policy</a> and{" "}
