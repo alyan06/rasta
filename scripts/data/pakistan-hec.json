@@ -1,0 +1,1688 @@
+[
+ {
+  "id": "pk-abasyn-university",
+  "name": "Abasyn University",
+  "city": "Peshawar",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/Abasyn-University.aspx"
+ },
+ {
+  "id": "pk-abbottabad-university-of-science-and-technology-aust",
+  "name": "Abbottabad University of Science and Technology (AUST)",
+  "city": "Abbottabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/AUST.aspx"
+ },
+ {
+  "id": "pk-abdul-wali-khan-university",
+  "name": "Abdul Wali Khan University",
+  "city": "Mardan",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/Abdul-Wali-Khan-University.aspx"
+ },
+ {
+  "id": "pk-adam-institute-of-social-management-science-aisms-karachi",
+  "name": "Adam Institute of Social & Management Science (AISMS), Karachi",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Adam-Institute-of-Social-&-Management-Science-(AISMS),-Karachi.aspx"
+ },
+ {
+  "id": "pk-aga-khan-university",
+  "name": "Aga Khan University",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Aga-Khan-University.aspx"
+ },
+ {
+  "id": "pk-air-university",
+  "name": "Air University",
+  "city": "Islamabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Islamabad/Air-University.aspx"
+ },
+ {
+  "id": "pk-al-ghazali-university",
+  "name": "Al-Ghazali University",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Al-Ghazali University.aspx"
+ },
+ {
+  "id": "pk-al-hamd-islamic-university",
+  "name": "Al-Hamd Islamic University",
+  "city": "Quetta",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Balochistan/Al-Hamd-Islamic-University.aspx"
+ },
+ {
+  "id": "pk-ali-bin-usman-institute-multan",
+  "name": "Ali Bin Usman Institute, Multan",
+  "city": "Multan",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Ali-Bin-Usman-Institute-Multan.aspx"
+ },
+ {
+  "id": "pk-ali-institute-of-education",
+  "name": "Ali Institute of Education",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Ali-Institute-of-Education.aspx"
+ },
+ {
+  "id": "pk-al-karam-international-institute-bhera",
+  "name": "Al-Karam International Institute, Bhera",
+  "city": "Bhera",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Al-Karam-International-Institute,-Bhera.aspx"
+ },
+ {
+  "id": "pk-al-kawthar-university-karachi",
+  "name": "Al-Kawthar University, Karachi",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Al-Kawthar-University,-Karachi.aspx"
+ },
+ {
+  "id": "pk-al-khair-university",
+  "name": "Al-Khair University",
+  "city": "Bhimber",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/AJK/Al-Khair-University.aspx"
+ },
+ {
+  "id": "pk-allama-iqbal-open-university",
+  "name": "Allama Iqbal Open University",
+  "city": "Islamabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Islamabad/Allama-Iqbal-Open-University.aspx"
+ },
+ {
+  "id": "pk-aror-university-of-art-architecture-design-and-heritage-sukkur",
+  "name": "Aror University of Art, Architecture, Design and Heritage, Sukkur",
+  "city": "Sukkur",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Islamabad/Aror-University-of-Art,-Arch.aspx"
+ },
+ {
+  "id": "pk-baba-guru-nanak-university-nankana-sahib",
+  "name": "Baba Guru Nanak University, Nankana Sahib",
+  "city": "Nankana Sahib",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Baba-Guru-Nanak-University.aspx"
+ },
+ {
+  "id": "pk-bacha-khan-university",
+  "name": "Bacha Khan University",
+  "city": "Charsada",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/Bacha-Khan-University.aspx"
+ },
+ {
+  "id": "pk-bahauddin-zakariya-university",
+  "name": "Bahauddin Zakariya University",
+  "city": "Multan",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Bahauddin-Zakariya-University.aspx"
+ },
+ {
+  "id": "pk-bahria-university",
+  "name": "Bahria University",
+  "city": "Islamabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Islamabad/Bahria-University.aspx"
+ },
+ {
+  "id": "pk-balochistan-university-of-engineering-technology",
+  "name": "Balochistan University of Engineering & Technology",
+  "city": "Khuzdar",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Balochistan/Balochistan-University-of-Engineering-and-Technology.aspx"
+ },
+ {
+  "id": "pk-balochistan-university-of-information-technology-engineering-management-sciences-buitems",
+  "name": "Balochistan University of Information Technology, Engineering & Management Sciences (BUITEMS)",
+  "city": "Quetta",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Balochistan/Balochistan-University-of-Information-Technology--Management-Sciences.aspx"
+ },
+ {
+  "id": "pk-baqai-medical-university",
+  "name": "Baqai Medical University",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Baqai-Medical-University.aspx"
+ },
+ {
+  "id": "pk-beaconhouse-national-university",
+  "name": "Beaconhouse National University",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Beaconhouse-National-University.aspx"
+ },
+ {
+  "id": "pk-begum-nustrat-bhutto-women-university-sukkur",
+  "name": "Begum Nustrat Bhutto Women University, Sukkur",
+  "city": "Sukkur",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Begum-Nustrat-Bhutto-Women-University-Sukkur.aspx"
+ },
+ {
+  "id": "pk-benazir-bhutto-shaheed-university-lyari",
+  "name": "Benazir Bhutto Shaheed University Lyari",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Benazir-Bhutto-Shaheed-University-Lyari.aspx"
+ },
+ {
+  "id": "pk-benazir-bhutto-shaheed-university-of-technology-skill-development-khairpur-mirs",
+  "name": "Benazir Bhutto Shaheed University of Technology & Skill Development, Khairpur Mirs",
+  "city": "Khairpur",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Benazir-Bhutto-Shaheed-University-of-Technology--Skill-Development,-Khairpur-Mirs.aspx"
+ },
+ {
+  "id": "pk-brains-institute-peshawar",
+  "name": "Brains Institute Peshawar",
+  "city": "Peshawar",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/Brains-Institute-Peshawar.aspx"
+ },
+ {
+  "id": "pk-capital-university-of-science-technology",
+  "name": "Capital University of Science & Technology",
+  "city": "Islamabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Islamabad/Capital-University-of-Science-and-Technology.aspx"
+ },
+ {
+  "id": "pk-cecos-university-of-information-technology-emerging-sciences",
+  "name": "CECOS University of Information Technology & Emerging Sciences",
+  "city": "Peshawar",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/CECOS-University-of-Information-Technology-and-Emerging-Sciences.aspx"
+ },
+ {
+  "id": "pk-cholistan-university-of-veterinary-and-animal-sciences-bahawalpur",
+  "name": "Cholistan University of Veterinary and Animal Sciences, Bahawalpur",
+  "city": "Bahawal Pur",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Cholistan-University-of-Veterinary-and-Animal-Sciences,-Bahawalpur.aspx"
+ },
+ {
+  "id": "pk-city-university-of-science-and-information-technology",
+  "name": "City University of Science and Information Technology",
+  "city": "Peshawar",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/City-University-of-Science-and-Information-Technology.aspx"
+ },
+ {
+  "id": "pk-commecs-institute-of-business-emerging-sciences",
+  "name": "Commecs Institute of Business & Emerging Sciences",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Commecs-Institute-of-Business--Emerging-Sciences.aspx"
+ },
+ {
+  "id": "pk-comsats-university-islamabad",
+  "name": "COMSATS University, Islamabad",
+  "city": "Islamabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Islamabad/COMSATS.aspx"
+ },
+ {
+  "id": "pk-dadabhoy-institute-of-higher-education",
+  "name": "Dadabhoy Institute of Higher Education",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Dadabhoy-Institute-of-Higher-Education.aspx"
+ },
+ {
+  "id": "pk-dar-ul-madina-international-university-islamabad",
+  "name": "Dar-ul-Madina International University, Islamabad",
+  "city": "Islamabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Islamabad/Dar-ul-Madina-International-University.aspx"
+ },
+ {
+  "id": "pk-dawood-university-of-engineering-technology",
+  "name": "Dawood University of Engineering & Technology",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Dawood-University-of-Engineering--Technology.aspx"
+ },
+ {
+  "id": "pk-denning-institute-of-technology-and-entrepreneurship-karachi",
+  "name": "Denning Institute of Technology and Entrepreneurship, Karachi",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Denning-Institute-of-Technology-and-Entrepreneurship,-Karachi.aspx"
+ },
+ {
+  "id": "pk-dha-suffa-university",
+  "name": "DHA Suffa University",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/DHA-Suffa-University.aspx"
+ },
+ {
+  "id": "pk-dow-university-of-health-sciences",
+  "name": "DOW University of Health Sciences",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/DOW-University-of-Health-Sciences.aspx"
+ },
+ {
+  "id": "pk-emaan-institute-of-management-sciences-karachi",
+  "name": "Emaan Institute of Management & Sciences, Karachi",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Eman-Institute-of-Management-and-Sciences-Karachi.aspx"
+ },
+ {
+  "id": "pk-emerson-university-multan",
+  "name": "Emerson University, Multan",
+  "city": "Multan",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Emerson-University-Multan.aspx"
+ },
+ {
+  "id": "pk-faisalabad-medical-university-faisalabad",
+  "name": "Faisalabad Medical University, Faisalabad",
+  "city": "Faisalabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Faisalabad-Medical-Unviersity,-Faisalabad.aspx"
+ },
+ {
+  "id": "pk-fatima-jinnah-medical-university-lahore",
+  "name": "Fatima Jinnah Medical University, Lahore",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Fatima-Jinnah-medical-University,-Lahore.aspx"
+ },
+ {
+  "id": "pk-fatima-jinnah-women-university-rawalpindi",
+  "name": "Fatima Jinnah Women University, Rawalpindi",
+  "city": "Rawalpindi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Fatima-Jinnah-Women-University.aspx"
+ },
+ {
+  "id": "pk-federal-urdu-university-of-arts-sciences-technology",
+  "name": "Federal Urdu University of Arts, Sciences & Technology",
+  "city": "Islamabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Islamabad/Federal-Urdu-University.aspx"
+ },
+ {
+  "id": "pk-forman-christian-college",
+  "name": "Forman Christian College",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Forman-Christian-College.aspx"
+ },
+ {
+  "id": "pk-foundation-university",
+  "name": "Foundation University",
+  "city": "Islamabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Islamabad/Foundation-University.aspx"
+ },
+ {
+  "id": "pk-gambat-institute-of-medical-sciences",
+  "name": "Gambat Institute of Medical Sciences",
+  "city": "Khairpur",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Gambat-Institute-of-Medical-Sciences.aspx"
+ },
+ {
+  "id": "pk-gandhara-university",
+  "name": "Gandhara University",
+  "city": "Peshawar",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/Gandhara-University.aspx"
+ },
+ {
+  "id": "pk-ghazi-national-institute-of-engineering-and-sciences-dera-ghazi-khan",
+  "name": "Ghazi National Institute of Engineering and Sciences, Dera Ghazi Khan",
+  "city": "Dera Ghazi Khan",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/GNIES-DGKHAN.aspx"
+ },
+ {
+  "id": "pk-ghazi-university-dera-ghazi-khan",
+  "name": "Ghazi University, Dera Ghazi Khan",
+  "city": "Dera Ghazi Khan",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Ghazi-University.aspx"
+ },
+ {
+  "id": "pk-ghulam-ishaq-khan-institute-of-engineering-sciences-technology",
+  "name": "Ghulam Ishaq Khan Institute of Engineering Sciences & Technology",
+  "city": "Abbottabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/Ghulam-Ishaq-Khan-Institute-of-Engineering-Sciences--Technology.aspx"
+ },
+ {
+  "id": "pk-gift-university",
+  "name": "GIFT University",
+  "city": "Gujranwala",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/GIFT-University.aspx"
+ },
+ {
+  "id": "pk-global-institute-lahore-hec-noc-suspended-admissions-have-been-stopped-by-hec-from-fall-2016",
+  "name": "Global Institute, Lahore [HEC-NOC SUSPENDED] (ADMISSIONS HAVE BEEN STOPPED BY HEC FROM FALL 2016)",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Global-Institute.aspx"
+ },
+ {
+  "id": "pk-gomal-university",
+  "name": "Gomal University",
+  "city": "Dera Ismail Khan",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/Gomal-University.aspx"
+ },
+ {
+  "id": "pk-government-college-for-women-university-sialkot",
+  "name": "Government College for Women University, Sialkot",
+  "city": "Sialkot",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Government-College-for-Women-University,-Sialkot.aspx"
+ },
+ {
+  "id": "pk-government-college-university-faisalabad",
+  "name": "Government College University, Faisalabad",
+  "city": "Faisalabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Government-College-University.aspx"
+ },
+ {
+  "id": "pk-government-college-university-hyderabad",
+  "name": "Government College University, Hyderabad",
+  "city": "Hyderabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Government-College-University,-Hyderabad.aspx"
+ },
+ {
+  "id": "pk-government-college-university-lahore",
+  "name": "Government College University, Lahore",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Government-College-University,-Lahore.aspx"
+ },
+ {
+  "id": "pk-government-college-women-university-faisalabad",
+  "name": "Government College Women University, Faisalabad",
+  "city": "Faisalabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Government-College-Women-University.aspx"
+ },
+ {
+  "id": "pk-government-sadiq-college-women-university",
+  "name": "Government Sadiq College Women University",
+  "city": "Bahawal Pur",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Government-Sadiq-College-Women-University.aspx"
+ },
+ {
+  "id": "pk-grand-asian-university-sialkot",
+  "name": "Grand Asian University, Sialkot",
+  "city": "Sialkot",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Grand-Asian-University-Sialkot.aspx"
+ },
+ {
+  "id": "pk-greenwich-university",
+  "name": "Greenwich University",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Greenwich-University.aspx"
+ },
+ {
+  "id": "pk-habib-university",
+  "name": "Habib University",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Habib-University.aspx"
+ },
+ {
+  "id": "pk-hajvery-university",
+  "name": "Hajvery University",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Hajvery-University.aspx"
+ },
+ {
+  "id": "pk-hamdard-university",
+  "name": "Hamdard University",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Hamdard-University.aspx"
+ },
+ {
+  "id": "pk-hands-institute-of-development-studies-karachi",
+  "name": "Hands-Institute of Development Studies, Karachi",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Hands-Institute-of--Development-Studies,-Karachi.aspx"
+ },
+ {
+  "id": "pk-hazara-university",
+  "name": "Hazara University",
+  "city": "Mansehra",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/Hazara-University.aspx"
+ },
+ {
+  "id": "pk-health-services-academy-hsa-islamabad",
+  "name": "Health Services Academy (HSA), Islamabad",
+  "city": "Islamabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Islamabad/Health-Services-Academy.aspx"
+ },
+ {
+  "id": "pk-hitec-university",
+  "name": "HITEC University",
+  "city": "Rawalpindi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/HITEC-University.aspx"
+ },
+ {
+  "id": "pk-hyderabad-institute-for-technology-management-sciences",
+  "name": "Hyderabad Institute for Technology & Management Sciences",
+  "city": "Hyderabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Hyderabad-Institute-for-Technology-&-Management-Sciences.aspx"
+ },
+ {
+  "id": "pk-ibadat-international-university-islamabad",
+  "name": "Ibadat International University, Islamabad",
+  "city": "Islamabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Islamabad/Ibadat-International-University.aspx"
+ },
+ {
+  "id": "pk-ibn-e-sina-university-mirpurkhas",
+  "name": "Ibn-e-Sina University, Mirpurkhas",
+  "city": "Mirpur Khas",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Ibn-e-Sina-University,-Mirpurkhas.aspx"
+ },
+ {
+  "id": "pk-ilma-university",
+  "name": "ILMA University",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/ILMA.aspx"
+ },
+ {
+  "id": "pk-imperial-college-of-business-studies",
+  "name": "Imperial College of Business Studies",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Imperial-College-of-Business-Studies.aspx"
+ },
+ {
+  "id": "pk-indus-university",
+  "name": "Indus University",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Indus-University.aspx"
+ },
+ {
+  "id": "pk-indus-valley-school-of-art-architecture",
+  "name": "Indus Valley School of Art & Architecture",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Indus-Valley-School-of-Art-and-Architecture.aspx"
+ },
+ {
+  "id": "pk-information-technology-university-of-the-punjab",
+  "name": "Information Technology University of the Punjab",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Information-Technology-University-of-the-Punjab.aspx"
+ },
+ {
+  "id": "pk-institute-for-art-and-culture",
+  "name": "Institute for Art and Culture",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Institute-for-Art-and-Culture.aspx"
+ },
+ {
+  "id": "pk-institute-of-business-administration",
+  "name": "Institute of Business Administration",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Institute-of-Business-Administration.aspx"
+ },
+ {
+  "id": "pk-institute-of-business-management",
+  "name": "Institute of Business Management",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Institute-of-Business-Management.aspx"
+ },
+ {
+  "id": "pk-institute-of-management-science",
+  "name": "Institute of Management Science",
+  "city": "Peshawar",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/Institute-of-Management-Science.aspx"
+ },
+ {
+  "id": "pk-institute-of-management-sciences",
+  "name": "Institute of Management Sciences",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Institute-of-Management-Sciences.aspx"
+ },
+ {
+  "id": "pk-institute-of-space-technology",
+  "name": "Institute of Space Technology",
+  "city": "Islamabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Islamabad/Institute-of-Space-Technology.aspx"
+ },
+ {
+  "id": "pk-international-institute-of-science-arts-and-technology-gujranwala",
+  "name": "International Institute of Science, Arts and Technology, Gujranwala",
+  "city": "Gujranwala",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/International-Institute-of-Science,-Arts-and-Technology,-Gujranwala.aspx"
+ },
+ {
+  "id": "pk-international-islamic-university",
+  "name": "International Islamic University",
+  "city": "Islamabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Islamabad/International-Islamic-University.aspx"
+ },
+ {
+  "id": "pk-iqra-national-university",
+  "name": "Iqra National University",
+  "city": "Peshawar",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/Iqra-National-University.aspx"
+ },
+ {
+  "id": "pk-iqra-university",
+  "name": "Iqra University",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Iqra-University.aspx"
+ },
+ {
+  "id": "pk-islamabad-university-of-health-sciences-and-emerging-technologies-iuht-islamabad",
+  "name": "Islamabad University of Health Sciences and Emerging Technologies (IUHT) ,Islamabad",
+  "city": "Islamabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Islamabad/Islamabad-University-of-Health-Sciences-and-Emerging-Technologies-(IUHT)-,Islamabad.aspx"
+ },
+ {
+  "id": "pk-islamia-college-peshawar",
+  "name": "Islamia College Peshawar",
+  "city": "Peshawar",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/Islamia-College-Peshawar.aspx"
+ },
+ {
+  "id": "pk-islamia-university",
+  "name": "Islamia University",
+  "city": "Bahawal Pur",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Islamia-University.aspx"
+ },
+ {
+  "id": "pk-isra-university",
+  "name": "Isra University",
+  "city": "Hyderabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Isra-University.aspx"
+ },
+ {
+  "id": "pk-jinnah-sindh-medical-university",
+  "name": "Jinnah Sindh Medical University",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Jinnah-Sindh-Medical-University.aspx"
+ },
+ {
+  "id": "pk-jinnah-university-for-women",
+  "name": "Jinnah University for Women",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Jinnah-University-for-Women.aspx"
+ },
+ {
+  "id": "pk-kalam-bibi-international-women-institute-bannu",
+  "name": "Kalam Bibi International Women Institute, Bannu",
+  "city": "Bannu",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/Kalam-Bibi-International-Institute-University.aspx"
+ },
+ {
+  "id": "pk-karachi-institute-of-economics-technology",
+  "name": "Karachi Institute of Economics & Technology",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Karachi-Institute-of-Economics--Technology.aspx"
+ },
+ {
+  "id": "pk-karachi-institute-of-technology-and-entrepreneurship-kite-karachi",
+  "name": "Karachi Institute of Technology and Entrepreneurship (KITE), Karachi",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Karachi-Institute-of-Technology-and-Entrepreneurship.aspx"
+ },
+ {
+  "id": "pk-karachi-metropolitan-university-karachi",
+  "name": "Karachi Metropolitan University, Karachi",
+  "city": "Abbottabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Karachi-Metropolitan-University,-Karachi.aspx"
+ },
+ {
+  "id": "pk-karachi-school-of-business-and-leadership",
+  "name": "Karachi School of Business and Leadership",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Karachi-School-of-Business--Leadership.aspx"
+ },
+ {
+  "id": "pk-karakurum-international-university",
+  "name": "Karakurum International University",
+  "city": "Gilgit",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Gilgit Baltistan/Karakurum-International-University.aspx"
+ },
+ {
+  "id": "pk-kasb-institute-of-technology",
+  "name": "KASB Institute of Technology",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/KASB-Institute-of-Technology.aspx"
+ },
+ {
+  "id": "pk-khawaja-freed-university-of-engineering-information-technology-rahim-yar-khan",
+  "name": "Khawaja Freed University of Engineering & Information Technology, Rahim Yar Khan",
+  "city": "Rahim Yar Khan",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Khawaja-Freed-University-of-Engineering--Information-Technology.aspx"
+ },
+ {
+  "id": "pk-khushal-khan-khattak-university",
+  "name": "Khushal Khan Khattak University",
+  "city": "Karak",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/Khushal-Khan-Khattak-University.aspx"
+ },
+ {
+  "id": "pk-khyber-medical-university",
+  "name": "Khyber Medical University",
+  "city": "Peshawar",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/Khyber-Medical-University.aspx"
+ },
+ {
+  "id": "pk-king-edward-medical-university",
+  "name": "King Edward Medical University",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/King-Edward-Medical-University.aspx"
+ },
+ {
+  "id": "pk-kinnaird-college-for-women",
+  "name": "Kinnaird College for Women",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Kinnaird-College-for-Women.aspx"
+ },
+ {
+  "id": "pk-kohat-university-of-science-and-technology",
+  "name": "Kohat University of Science and Technology",
+  "city": "Kohat",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/Kohat-University-of-Science-and-Technology.aspx"
+ },
+ {
+  "id": "pk-kohsar-university-murree",
+  "name": "Kohsar University, Murree",
+  "city": "Rawalpindi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Kohsar-University,-Murree.aspx"
+ },
+ {
+  "id": "pk-lahore-college-for-women-university",
+  "name": "Lahore College for Women University",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Lahore-College-for-Women-University.aspx"
+ },
+ {
+  "id": "pk-lahore-garrison-university",
+  "name": "Lahore Garrison University",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Lahore-Garrison-University.aspx"
+ },
+ {
+  "id": "pk-lahore-leads-university",
+  "name": "Lahore Leads University",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Lahore-Leads-University.aspx"
+ },
+ {
+  "id": "pk-lahore-school-of-economics",
+  "name": "Lahore School of Economics",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Lahore-School-of-Economics.aspx"
+ },
+ {
+  "id": "pk-lahore-university-of-biological-and-applied-sciences-lahore",
+  "name": "Lahore University of Biological and Applied Sciences, Lahore",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Lahore-University-of-Biological-and-Applied-Sciences,-Lahore.aspx"
+ },
+ {
+  "id": "pk-lasbela-university-of-agriculture-water-marine-sciences",
+  "name": "Lasbela University of Agriculture, Water & Marine Sciences",
+  "city": "Lasbella",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Balochistan/Lasbela-University-of-Agriculture,-Water-and-Marine-Sciences.aspx"
+ },
+ {
+  "id": "pk-liaquat-university-of-medical-health-sciences",
+  "name": "Liaquat University of Medical & Health Sciences",
+  "city": "Jamshoro",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Liaquat-University-of-Medical-and-Health-Sciences.aspx"
+ },
+ {
+  "id": "pk-malir-university-of-science-technology-karachi",
+  "name": "Malir University of Science & Technology, Karachi",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Malir-University.aspx"
+ },
+ {
+  "id": "pk-mehran-university-of-engineering-technology",
+  "name": "Mehran University of Engineering & Technology",
+  "city": "Khairpur",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Mehran-University-of-Engineering--Technology.aspx"
+ },
+ {
+  "id": "pk-metropolitan-university-karachi",
+  "name": "Metropolitan University Karachi",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Metropolitan-University-Karachi.aspx"
+ },
+ {
+  "id": "pk-millennium-institute-of-technology-and-entrepreneurship-karachi",
+  "name": "Millennium Institute of Technology and Entrepreneurship, Karachi",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/MITE.aspx"
+ },
+ {
+  "id": "pk-minhaj-university",
+  "name": "Minhaj University",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Minhaj-University.aspx"
+ },
+ {
+  "id": "pk-mir-chakar-khan-rind-university-of-technology-dera-ghazi-khan",
+  "name": "Mir Chakar Khan Rind University of Technology, Dera Ghazi Khan",
+  "city": "Dera Ghazi Khan",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Mir-Chakar-Rind-University-of-Technology.aspx"
+ },
+ {
+  "id": "pk-mir-chakar-khan-rind-university-sibi-balochistan",
+  "name": "Mir Chakar Khan Rind University, Sibi Balochistan",
+  "city": "Sibi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Balochistan/Mir-Chakar-Khan-Rind-University,-Sibi--Balochistan.aspx"
+ },
+ {
+  "id": "pk-mirpur-university-of-science-technology",
+  "name": "Mirpur University of Science & Technology",
+  "city": "Mirpur",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/AJK/Mirpur-University-of-Science-and-Technology.aspx"
+ },
+ {
+  "id": "pk-mohi-ud-din-islamic-university",
+  "name": "Mohi-ud-Din Islamic University",
+  "city": "Nerian Sharif",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/AJK/Mohi-ud-Din-Islamic-University.aspx"
+ },
+ {
+  "id": "pk-muhammad-ali-jinnah-university",
+  "name": "Muhammad Ali Jinnah University",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Muhammad-Ali-Jinnah-University.aspx"
+ },
+ {
+  "id": "pk-muhammad-nawaz-shareef-university-of-agriculture",
+  "name": "Muhammad Nawaz Shareef University of Agriculture",
+  "city": "Multan",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Muhammad-Nawaz-Shareef-University-of-Agriculture.aspx"
+ },
+ {
+  "id": "pk-muhammad-nawaz-sharif-university-of-engineering-technology",
+  "name": "Muhammad Nawaz Sharif University of Engineering & Technology",
+  "city": "Multan",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Muhammad-Nawaz-Sharif-University-of-Engineering-and-Technology.aspx"
+ },
+ {
+  "id": "pk-mukabbir-university-of-science-technology-gujrat",
+  "name": "Mukabbir University of Science & Technology, Gujrat",
+  "city": "Gujrat",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Mukabbir-University-of-Science-&-Technology,-Gujrat.aspx"
+ },
+ {
+  "id": "pk-multan-university-of-science-technology-multan",
+  "name": "Multan University of Science & Technology, Multan",
+  "city": "Multan",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Multan-University-of-Science-&-Technology,-Multan.aspx"
+ },
+ {
+  "id": "pk-my-university",
+  "name": "MY University",
+  "city": "Islamabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Islamabad/MY-University.aspx"
+ },
+ {
+  "id": "pk-namal-university-mainwali",
+  "name": "Namal University, Mainwali",
+  "city": "Mianwali",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Namal-University-Manwali.aspx"
+ },
+ {
+  "id": "pk-national-college-of-arts",
+  "name": "National College of Arts",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/National-College-of-Arts.aspx"
+ },
+ {
+  "id": "pk-national-college-of-business-administration-economics",
+  "name": "National College of Business Administration & Economics",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/National-College-of-Business-Administration--Economics.aspx"
+ },
+ {
+  "id": "pk-national-defense-university",
+  "name": "National Defense University",
+  "city": "Islamabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Islamabad/National-Defense-University.aspx"
+ },
+ {
+  "id": "pk-national-excellence-institute-nei-rawalpindi",
+  "name": "National Excellence Institute (NEI), Rawalpindi",
+  "city": "Rawalpindi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Islamabad/National-Excellence-Institute-(NEI),-Rawalpindi.aspx"
+ },
+ {
+  "id": "pk-national-institute-of-technology-lahore",
+  "name": "National Institute of Technology, Lahore",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/National Institute of TEchnology, Lahore.aspx"
+ },
+ {
+  "id": "pk-national-skills-university-islamabad",
+  "name": "National Skills University, Islamabad",
+  "city": "Islamabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Islamabad/National-Skills-University,-Islamabad.aspx"
+ },
+ {
+  "id": "pk-national-textile-university",
+  "name": "National Textile University",
+  "city": "Faisalabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/National-Textile-University.aspx"
+ },
+ {
+  "id": "pk-national-university-of-medical-sciences",
+  "name": "National University of Medical Sciences",
+  "city": "Rawalpindi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Islamabad/National-University-of-Medical-Sciences.aspx"
+ },
+ {
+  "id": "pk-national-university-of-modern-languages",
+  "name": "National University of Modern Languages",
+  "city": "Islamabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Islamabad/National-University-of-Modern-Languages.aspx"
+ },
+ {
+  "id": "pk-national-university-of-pakistan",
+  "name": "National University of Pakistan",
+  "city": "Rawalpindi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/National-University-of-Pakistan.aspx"
+ },
+ {
+  "id": "pk-national-university-of-technology-nutech-islamabad",
+  "name": "National University of Technology (NUTECH), Islamabad",
+  "city": "Islamabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Islamabad/NUTECH.aspx"
+ },
+ {
+  "id": "pk-ned-university-of-engineering-technology",
+  "name": "NED University of Engineering & Technology",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/NED-University-of-Engineering--Technology.aspx"
+ },
+ {
+  "id": "pk-newport-institute-of-communications-economics",
+  "name": "Newport Institute of Communications & Economics",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Newport-Institute-of-Communications--Economics.aspx"
+ },
+ {
+  "id": "pk-nfc-institute-of-engineering-technology",
+  "name": "NFC Institute of Engineering & Technology",
+  "city": "Multan",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/NFC-Institute-of-Engineering--Technology.aspx"
+ },
+ {
+  "id": "pk-nippon-institute-of-advanced-sciences-sheikhupura",
+  "name": "Nippon Institute of Advanced Sciences, Sheikhupura",
+  "city": "Sheikhupura",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Nippon Institute of Advanced Sciences, Sheikhupura.aspx"
+ },
+ {
+  "id": "pk-nishtar-medical-university-multan",
+  "name": "Nishtar Medical University, Multan",
+  "city": "Multan",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Nishtar-Medical-University,-Multan.aspx"
+ },
+ {
+  "id": "pk-northern-university",
+  "name": "Northern University",
+  "city": "Nowshehra",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/Northern-University.aspx"
+ },
+ {
+  "id": "pk-nur-international-university",
+  "name": "Nur International University",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Nur-International-University.aspx"
+ },
+ {
+  "id": "pk-paf-air-war-college-institute-karachi",
+  "name": "PAF Air War College Institute, Karachi",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/PAF Air-War-College-Institute,-Karachi-.aspx"
+ },
+ {
+  "id": "pk-pak-austria-fachhochschule-institute-of-applied-sciences-and-technology-haripur",
+  "name": "Pak-Austria Fachhochschule Institute of Applied Sciences and Technology, Haripur",
+  "city": "Haripur",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/PAF-IAST.aspx"
+ },
+ {
+  "id": "pk-pakistan-global-institute-rawat",
+  "name": "Pakistan Global Institute, Rawat",
+  "city": "Rawat",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Pakistan-Global-Institute,-Rawat.aspx"
+ },
+ {
+  "id": "pk-pakistan-institute-of-development-economics",
+  "name": "Pakistan Institute of Development Economics",
+  "city": "Islamabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Islamabad/Pakistan-Institute-of-Development-Economics.aspx"
+ },
+ {
+  "id": "pk-pakistan-institute-of-engineering-applied-sciences",
+  "name": "Pakistan Institute of Engineering & Applied Sciences",
+  "city": "Islamabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Islamabad/Pakistan-Institute-of-Engineering-And-Applied-Sciences.aspx"
+ },
+ {
+  "id": "pk-pakistan-institute-of-fashion-design",
+  "name": "Pakistan Institute of Fashion & Design",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Pakistan-Institute-of-Fashion-and-Design.aspx"
+ },
+ {
+  "id": "pk-pakistan-military-academy",
+  "name": "Pakistan Military Academy",
+  "city": "Abbottabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/Pakistan-Military-Academy.aspx"
+ },
+ {
+  "id": "pk-pakistan-naval-academy",
+  "name": "Pakistan Naval Academy",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Pakistan-Naval-Academy.aspx"
+ },
+ {
+  "id": "pk-peoples-university-of-medical-health-sciences-for-women",
+  "name": "Peoples University of Medical & Health Sciences for Women",
+  "city": "Nawabshah",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Peoples-University-of-Medical-and-Health-Sciences-for-Women.aspx"
+ },
+ {
+  "id": "pk-pir-mehr-ali-shah-arid-agriculture-university",
+  "name": "Pir Mehr Ali Shah Arid Agriculture University",
+  "city": "Rawalpindi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Pir-Mehr-Ali-Shah-Arid-Agriculture-University.aspx"
+ },
+ {
+  "id": "pk-preston-institute-of-management-science-technology",
+  "name": "Preston Institute of Management, Science & Technology",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Preston-Institute-of-Management,-Science-and-Technology.aspx"
+ },
+ {
+  "id": "pk-preston-university-karachi",
+  "name": "Preston University, Karachi",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Preston-University, Karachi.aspx"
+ },
+ {
+  "id": "pk-preston-university-kohat",
+  "name": "Preston University, Kohat",
+  "city": "Kohat",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/Preston-University-Kohat.aspx"
+ },
+ {
+  "id": "pk-punjab-tianjin-university-of-technology-lahore",
+  "name": "Punjab Tianjin University of Technology, Lahore",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Punjab-Tianjin-Universityf-of-Technology-(PTUT),-Lahore.aspx"
+ },
+ {
+  "id": "pk-qarshi-university",
+  "name": "Qarshi University",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Qarshi-University.aspx"
+ },
+ {
+  "id": "pk-quaid-e-azam-institute-of-management-sciences-sargodha",
+  "name": "Quaid e Azam Institute of Management Sciences Sargodha",
+  "city": "Sargodha",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Quaid-e-Azam-Institute-of-Management-Sciences-Sargodha.aspx"
+ },
+ {
+  "id": "pk-quaid-e-awam-university-of-engineering-sciences-technology",
+  "name": "Quaid-e-Awam University of Engineering, Sciences & Technology",
+  "city": "Nawabshah",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Quaid-e-Awam-University-of-Engineering,-Sciences--Technology.aspx"
+ },
+ {
+  "id": "pk-quaid-i-azam-university",
+  "name": "Quaid-i-Azam University",
+  "city": "Islamabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Islamabad/Quaid-i-Azam-University.aspx"
+ },
+ {
+  "id": "pk-qurtaba-university-of-science-information-technology",
+  "name": "Qurtaba University of Science & Information Technology",
+  "city": "Peshawar",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/Qurtaba-University-of-Science-and-Information-Technology.aspx"
+ },
+ {
+  "id": "pk-rashid-latif-khan-university-lahore",
+  "name": "Rashid Latif Khan University, Lahore",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Rashid-Latif-Khan-University-Lahore.aspx"
+ },
+ {
+  "id": "pk-rawalpindi-medical-university",
+  "name": "Rawalpindi Medical University",
+  "city": "Rawalpindi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Rawalpindi-Medical-University.aspx"
+ },
+ {
+  "id": "pk-rawalpindi-women-university-rawalpindi",
+  "name": "Rawalpindi Women University, Rawalpindi",
+  "city": "Rawalpindi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Rawalpindi-Women-University,-Rawalpindi.aspx"
+ },
+ {
+  "id": "pk-riphah-international-university",
+  "name": "Riphah International University",
+  "city": "Islamabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Islamabad/Riphah-International-University.aspx"
+ },
+ {
+  "id": "pk-saifee-burhani-university-karachi",
+  "name": "Saifee Burhani University, Karachi",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Saifee-Burhani-University,-Karachi.aspx"
+ },
+ {
+  "id": "pk-salim-habib-university-former-barret-hodgson-university-karachi",
+  "name": "Salim Habib University (Former Barret Hodgson University), Karachi",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Barrett-Hodgson-University.aspx"
+ },
+ {
+  "id": "pk-sardar-bahadur-khan-women-university",
+  "name": "Sardar Bahadur Khan Women University",
+  "city": "Quetta",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Balochistan/Sardar-Bahadur-Khan-Women-University.aspx"
+ },
+ {
+  "id": "pk-sarhad-university-of-science-information-technology",
+  "name": "Sarhad University of Science & Information Technology",
+  "city": "Peshawar",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/Sarhad-University-of-Science-and-Information-Technology.aspx"
+ },
+ {
+  "id": "pk-shah-abdul-latif-university",
+  "name": "Shah Abdul Latif University",
+  "city": "Khairpur",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Shah-Abdul-Latif-University.aspx"
+ },
+ {
+  "id": "pk-shaheed-allah-buksh-soomro-university-of-arts-design-and-heritages-jamshoro",
+  "name": "Shaheed Allah Buksh Soomro University of Arts, Design and Heritages, Jamshoro",
+  "city": "Jamshoro",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Shaheed-Allah-Buksh-Soomro-University-of-Arts,-Design-and-Heritages,-Jamshoro.aspx"
+ },
+ {
+  "id": "pk-shaheed-benazir-bhutto-city-university",
+  "name": "Shaheed Benazir Bhutto City University",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Shaheed-Benazir-Bhutto-City-University.aspx"
+ },
+ {
+  "id": "pk-shaheed-benazir-bhutto-dewan-university",
+  "name": "Shaheed Benazir Bhutto Dewan University",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Shaheed-Benazir-Bhutto-Dewan-University.aspx"
+ },
+ {
+  "id": "pk-shaheed-benazir-bhutto-university",
+  "name": "Shaheed Benazir Bhutto University",
+  "city": "Upper Dir",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/Shaheed-Benazir-Bhutto-University.aspx"
+ },
+ {
+  "id": "pk-shaheed-benazir-bhutto-university-of-veterinary-animal-sciences",
+  "name": "Shaheed Benazir Bhutto University of Veterinary & Animal Sciences",
+  "city": "Nawabshah",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Shaheed-Benazir-Bhutto-University-of-Veterinary-And-Animal-Sciences-.aspx"
+ },
+ {
+  "id": "pk-shaheed-benazir-bhutto-university-shaheed-benazirabad",
+  "name": "Shaheed Benazir Bhutto University, Shaheed Benazirabad",
+  "city": "Nawabshah",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Shaheed-Benazir-Bhutto-University,-Shaheed-Benazirabad.aspx"
+ },
+ {
+  "id": "pk-shaheed-benazir-bhutto-women-university",
+  "name": "Shaheed Benazir Bhutto Women University",
+  "city": "Peshawar",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/Shaheed-Benazir-Bhutto-Women-University.aspx"
+ },
+ {
+  "id": "pk-shaheed-mohtarma-benazir-bhutto-medical-university",
+  "name": "Shaheed Mohtarma Benazir Bhutto Medical University",
+  "city": "Larkana",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Shaheed-Mohtarma-Benazir-Bhutto-Medical-University.aspx"
+ },
+ {
+  "id": "pk-shaheed-zulfikar-ali-bhutto-institute-of-science-technology",
+  "name": "Shaheed Zulfikar Ali Bhutto Institute of Science & Technology",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Shaheed-Zulfikar-Ali-Bhutto-Institute-of-Science--Technology-(SZABIST).aspx"
+ },
+ {
+  "id": "pk-shaheed-zulfiqar-ali-bhutto-medical-university",
+  "name": "Shaheed Zulfiqar Ali Bhutto Medical University",
+  "city": "Islamabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Islamabad/Shaheed-Zulfiqar-Ali-Bhutto-Medical-University.aspx"
+ },
+ {
+  "id": "pk-shaheed-zulfiqar-ali-bhutto-university-of-law",
+  "name": "Shaheed Zulfiqar Ali Bhutto University of Law",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Shaheed-Zulfiqar-Ali-Bhutto-University-of-Law.aspx"
+ },
+ {
+  "id": "pk-shifa-tameer-e-millat-university",
+  "name": "Shifa Tameer-e-Millat University",
+  "city": "Islamabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Islamabad/Shifa-Tameer-e-Millat-University.aspx"
+ },
+ {
+  "id": "pk-shuhada-e-army-public-school-university-of-technology-nowshera",
+  "name": "Shuhada-e-Army Public School University of Technology, Nowshera",
+  "city": "Nowshehra",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/Shuhada-e-Army-Public-School-University-of-Technology,-Nowshera.aspx"
+ },
+ {
+  "id": "pk-sindh-agriculture-university-tandojam",
+  "name": "Sindh Agriculture University, Tandojam",
+  "city": "Hyderabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Sindh-Agriculture-University.aspx"
+ },
+ {
+  "id": "pk-sindh-institute-of-management-technology",
+  "name": "Sindh Institute of Management & Technology",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Sindh-Institute-of-Management-and-Technology.aspx"
+ },
+ {
+  "id": "pk-sindh-institute-of-medical-sciences",
+  "name": "Sindh Institute of Medical Sciences",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Sindh-Institute-of-Medical-Sciences.aspx"
+ },
+ {
+  "id": "pk-sindh-madresatul-islam-university",
+  "name": "Sindh Madresatul Islam University",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Sindh-Madresatul-Islam-University.aspx"
+ },
+ {
+  "id": "pk-sir-syed-case-institute-of-technology-islamabad",
+  "name": "Sir Syed (CASE) Institute of Technology, Islamabad",
+  "city": "Islamabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Islamabad/SSIT.aspx"
+ },
+ {
+  "id": "pk-sir-syed-university-of-engineering-technology",
+  "name": "Sir Syed University of Engineering & Technology",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Sir-Syed-University-of-Engineering--Technology.aspx"
+ },
+ {
+  "id": "pk-sohail-university-karachi",
+  "name": "Sohail University, Karachi",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Sohail-University,-Karachi.aspx"
+ },
+ {
+  "id": "pk-south-punjab-institute-of-science-and-technology-dera-ghazi-khan",
+  "name": "South Punjab Institute of Science and Technology, Dera Ghazi Khan",
+  "city": "Dera Ghazi Khan",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/South-Punjab-Institute-of-Science-and-Technology,-Dera-Ghazi-Khan.aspx"
+ },
+ {
+  "id": "pk-sukkur-iba-university",
+  "name": "Sukkur IBA University",
+  "city": "Sukkur",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Sukkur IBA University.aspx"
+ },
+ {
+  "id": "pk-textile-institute-of-pakistan",
+  "name": "Textile Institute of Pakistan",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Textile-Institute-of-Pakistan.aspx"
+ },
+ {
+  "id": "pk-thal-university-bhakkar",
+  "name": "Thal University, Bhakkar",
+  "city": "Bhakkar",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Thal-University,-Bhakkar.aspx"
+ },
+ {
+  "id": "pk-the-azad-jammu-kashmir-university-of-bhimber",
+  "name": "The Azad Jammu & Kashmir University of Bhimber",
+  "city": "Bhimber",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/AJK/The-Azad-Jammu-&-Kashmir-University-of-Bhimber.aspx"
+ },
+ {
+  "id": "pk-the-bolan-university-of-medical-and-health-sciences-quetta",
+  "name": "The Bolan University of Medical and Health Sciences, Quetta",
+  "city": "Quetta",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Balochistan/BUMHS.aspx"
+ },
+ {
+  "id": "pk-the-ganj-shakar-university-pakpattan",
+  "name": "The Ganj Shakar University, Pakpattan",
+  "city": "Pakpatan",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/The-Ganj-Shakar-University,-Pakpattan.aspx"
+ },
+ {
+  "id": "pk-the-green-international-university-lahore",
+  "name": "The Green International University, Lahore",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Green-International-University.aspx"
+ },
+ {
+  "id": "pk-the-nazeer-hussain-university",
+  "name": "The Nazeer Hussain University",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/The-Nazeer-Hussain-University.aspx"
+ },
+ {
+  "id": "pk-the-shaikh-ayaz-university-shikarpur-sindh",
+  "name": "The Shaikh Ayaz University, Shikarpur Sindh",
+  "city": "Shikarpur",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/The-Shaikh-Ayaz-University,-Shikarpur.aspx"
+ },
+ {
+  "id": "pk-the-sindh-institute-of-physical-medicine-and-rehabilitation-karachi",
+  "name": "The Sindh Institute of Physical Medicine and Rehabilitation, Karachi",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/SIPMR.aspx"
+ },
+ {
+  "id": "pk-the-superior-university",
+  "name": "The Superior University",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/The-Superior-College.aspx"
+ },
+ {
+  "id": "pk-the-university-of-agriculture-d-i-khan",
+  "name": "The University of Agriculture, D. I. Khan",
+  "city": "Dera Ismail Khan",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/The-University-of-Agriculture,-D-I-Khan.aspx"
+ },
+ {
+  "id": "pk-the-university-of-agriculture-peshawar",
+  "name": "The University of Agriculture, Peshawar",
+  "city": "Peshawar",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/The University of Agriculture, Peshawar.aspx"
+ },
+ {
+  "id": "pk-the-university-of-agriculture-swat",
+  "name": "The University of Agriculture, Swat",
+  "city": "Swat",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/The-University-of-Agriculture,-Swat.aspx"
+ },
+ {
+  "id": "pk-the-university-of-faisalabad",
+  "name": "The University of Faisalabad",
+  "city": "Faisalabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/The-University-of-Faisalabad.aspx"
+ },
+ {
+  "id": "pk-the-university-of-larkano",
+  "name": "The University of Larkano",
+  "city": "Larkana",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/The-University-of-Larkano.aspx"
+ },
+ {
+  "id": "pk-the-university-of-mirpurkhas",
+  "name": "The University of Mirpurkhas",
+  "city": "Mirpur Khas",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/The-University-of-Mirpurkhas.aspx"
+ },
+ {
+  "id": "pk-the-university-of-veterinary-animal-sciences-swat",
+  "name": "The University of Veterinary & Animal Sciences, Swat",
+  "city": "Swat",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/The-University-of-Veterinary-&-Animal-Sciences,-Swat.aspx"
+ },
+ {
+  "id": "pk-the-women-university",
+  "name": "The Women University",
+  "city": "Multan",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/The-Women-University.aspx"
+ },
+ {
+  "id": "pk-times-university-multan",
+  "name": "TIMES University, Multan",
+  "city": "Multan",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/TIMES-University,-Multan.aspx"
+ },
+ {
+  "id": "pk-uit-university-karachi",
+  "name": "UIT University, Karachi",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/UIT University, Karachi.aspx"
+ },
+ {
+  "id": "pk-university-of-agriculture",
+  "name": "University of Agriculture",
+  "city": "Faisalabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/University-of-Agriculture.aspx"
+ },
+ {
+  "id": "pk-university-of-art-and-culture-jamshoro",
+  "name": "University of Art and Culture, Jamshoro",
+  "city": "Jamshoro",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/University-of-Art-and-Culture.aspx"
+ },
+ {
+  "id": "pk-university-of-azad-jammu-kashmir",
+  "name": "University of Azad Jammu & Kashmir",
+  "city": "Muzaffarabad",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/AJK/University-of-Azad-Jammu-and-Kashmir.aspx"
+ },
+ {
+  "id": "pk-university-of-balochistan",
+  "name": "University of Balochistan",
+  "city": "Quetta",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Balochistan/University-of-Balochistan.aspx"
+ },
+ {
+  "id": "pk-university-of-baltistan-skardu",
+  "name": "University of Baltistan, Skardu",
+  "city": "Skardu",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Gilgit Baltistan/University-of-Baltistan.aspx"
+ },
+ {
+  "id": "pk-university-of-buner",
+  "name": "University of Buner",
+  "city": "Bunair",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/University-of-Buner.aspx"
+ },
+ {
+  "id": "pk-university-of-central-punjab",
+  "name": "University of Central Punjab",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/University-of-Central-Punjab.aspx"
+ },
+ {
+  "id": "pk-university-of-chakwal-chakwal",
+  "name": "University of Chakwal, Chakwal",
+  "city": "Chakwal",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/University-of-Chakwal.aspx"
+ },
+ {
+  "id": "pk-university-of-chenab-gujrat",
+  "name": "University of Chenab, Gujrat",
+  "city": "Gujrat",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/University-of-Chenab,-Gujrat.aspx"
+ },
+ {
+  "id": "pk-university-of-child-health-sciences-lahore",
+  "name": "University of Child Health Sciences, Lahore",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/University-of-Child-Health-Sciences,-Lahore.aspx"
+ },
+ {
+  "id": "pk-university-of-chitral",
+  "name": "University of Chitral",
+  "city": "Chitral",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/University-of-Chitral.aspx"
+ },
+ {
+  "id": "pk-university-of-education",
+  "name": "University of Education",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/University-of-Education.aspx"
+ },
+ {
+  "id": "pk-university-of-engineering-technology-peshawar",
+  "name": "University of Engineering & Technology",
+  "city": "Peshawar",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/University-of-Engineering-and-Technology.aspx"
+ },
+ {
+  "id": "pk-university-of-engineering-technology-lahore",
+  "name": "University of Engineering & Technology",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/University-of-Engineering-and-Technology.aspx"
+ },
+ {
+  "id": "pk-university-of-engineering-technology-uet-mardan",
+  "name": "University of Engineering & Technology (UET), Mardan",
+  "city": "Mardan",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/University-of-Engineering--Technology-Mardan.aspx"
+ },
+ {
+  "id": "pk-university-of-engineering-technology-taxila",
+  "name": "University of Engineering & Technology, Taxila",
+  "city": "Rawalpindi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/University-of-Engineering-&-Technology,-Taxila.aspx"
+ },
+ {
+  "id": "pk-university-of-engineering-and-applied-sciences-swat",
+  "name": "University of Engineering and Applied Sciences, Swat",
+  "city": "Swat",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/University-of-Engineering-&-Applied-Sciences,-Swat.aspx"
+ },
+ {
+  "id": "pk-university-of-fata",
+  "name": "University of FATA",
+  "city": "Kohat",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/University-of-FATA.aspx"
+ },
+ {
+  "id": "pk-university-of-gujrat",
+  "name": "University of Gujrat",
+  "city": "Gujrat",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/University-of-Gujrat.aspx"
+ },
+ {
+  "id": "pk-university-of-gwadar",
+  "name": "University of Gwadar",
+  "city": "Gawadar",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Balochistan/University-of-Gwadar.aspx"
+ },
+ {
+  "id": "pk-university-of-haripur",
+  "name": "University of Haripur",
+  "city": "Haripur",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/University-of-Haripur.aspx"
+ },
+ {
+  "id": "pk-university-of-health-sciences",
+  "name": "University of Health Sciences",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/University-of-Health-Sciences.aspx"
+ },
+ {
+  "id": "pk-university-of-home-economics-lahore",
+  "name": "University of Home Economics, Lahore",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/University-of-Home-Economics-Lahore.aspx"
+ },
+ {
+  "id": "pk-university-of-jhang",
+  "name": "University of Jhang",
+  "city": "Jhang",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/University-of-Jhang.aspx"
+ },
+ {
+  "id": "pk-university-of-kamalia",
+  "name": "University of Kamalia",
+  "city": "Kamalia",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/University-of-Kamalia.aspx"
+ },
+ {
+  "id": "pk-university-of-karachi",
+  "name": "University of Karachi",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/University-of-Karachi.aspx"
+ },
+ {
+  "id": "pk-university-of-kotli",
+  "name": "University of Kotli",
+  "city": "Kotli",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/AJK/University-of-Kotli.aspx"
+ },
+ {
+  "id": "pk-university-of-lahore",
+  "name": "University of Lahore",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/University-of-Lahore.aspx"
+ },
+ {
+  "id": "pk-university-of-lakki-marwat",
+  "name": "University of Lakki Marwat",
+  "city": "Lakki Marwat",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/The-University-of-Lakki-Marwat.aspx"
+ },
+ {
+  "id": "pk-university-of-layyah",
+  "name": "University of Layyah",
+  "city": "Layyah",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/University-of-Layyah.aspx"
+ },
+ {
+  "id": "pk-university-of-loralai",
+  "name": "University of Loralai",
+  "city": "Loralai",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Balochistan/University-of-Loralai.aspx"
+ },
+ {
+  "id": "pk-university-of-makran-panjgur",
+  "name": "University of Makran, Panjgur",
+  "city": "Punjgur",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Balochistan/University-of-Makran,-Panjgur.aspx"
+ },
+ {
+  "id": "pk-university-of-malakand",
+  "name": "University of Malakand",
+  "city": "Malakand",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/University-of-Malakand.aspx"
+ },
+ {
+  "id": "pk-university-of-management-technology",
+  "name": "University of Management & Technology",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/University-of-Management-and-Technology.aspx"
+ },
+ {
+  "id": "pk-university-of-mianwali",
+  "name": "University of Mianwali",
+  "city": "Mianwali",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/University-of-Mianwali.aspx"
+ },
+ {
+  "id": "pk-university-of-modern-sciences-tando-muhammad-khan",
+  "name": "University of Modern Sciences, Tando Muhammad Khan",
+  "city": "Tando Muhammad  Khan",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/University-of-Modern-Sciences,-Tando-Muhammad-Khan.aspx"
+ },
+ {
+  "id": "pk-university-of-narowal",
+  "name": "University of Narowal",
+  "city": "Narowal",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/University-of-Narowal.aspx"
+ },
+ {
+  "id": "pk-university-of-okara",
+  "name": "University of Okara",
+  "city": "Okara",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/University-of-Okara.aspx"
+ },
+ {
+  "id": "pk-university-of-peshawar",
+  "name": "University of Peshawar",
+  "city": "Peshawar",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/University-of-Peshawar.aspx"
+ },
+ {
+  "id": "pk-university-of-poonch",
+  "name": "University of Poonch",
+  "city": "Poonch",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/AJK/University-of-Poonch.aspx"
+ },
+ {
+  "id": "pk-university-of-rasul-mandi-bahauddin",
+  "name": "University of Rasul-Mandi Bahauddin",
+  "city": "Mandi Bahauddin",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/University of Rasul-Mandi Bahauddin.aspx"
+ },
+ {
+  "id": "pk-university-of-sahiwal",
+  "name": "University of Sahiwal",
+  "city": "Sahiwal",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/University-of-Sahiwal.aspx"
+ },
+ {
+  "id": "pk-university-of-sargodha",
+  "name": "University of Sargodha",
+  "city": "Sargodha",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/University-of-Sargodha.aspx"
+ },
+ {
+  "id": "pk-university-of-science-technology",
+  "name": "University of Science & Technology",
+  "city": "Bannu",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/University-of-Science-and-Technology.aspx"
+ },
+ {
+  "id": "pk-university-of-science-and-technology-lahore",
+  "name": "University of Science and Technology, Lahore",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/University-of-Science-and-Technology,-Lahore.aspx"
+ },
+ {
+  "id": "pk-university-of-shangla",
+  "name": "University of Shangla",
+  "city": "Shangla",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/University-of-Shangla.aspx"
+ },
+ {
+  "id": "pk-university-of-sialkot-sialkot",
+  "name": "University of Sialkot, Sialkot",
+  "city": "Sialkot",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/UniversityofSialkot.aspx"
+ },
+ {
+  "id": "pk-university-of-sindh",
+  "name": "University of Sindh",
+  "city": "Mirpur Khas",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/University-of-Sindh.aspx"
+ },
+ {
+  "id": "pk-university-of-south-asia",
+  "name": "University of South Asia",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/University-of-South-Asia.aspx"
+ },
+ {
+  "id": "pk-university-of-southern-punjab",
+  "name": "University of Southern Punjab",
+  "city": "Multan",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/university-of-Southern-Punjab.aspx"
+ },
+ {
+  "id": "pk-university-of-sufism-and-modern-sciences-bhitshah-sindh",
+  "name": "University of Sufism and Modern Sciences, Bhitshah Sindh",
+  "city": "Bhit Shah",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/USMS-Bhitshah.aspx"
+ },
+ {
+  "id": "pk-university-of-swabi",
+  "name": "University of Swabi",
+  "city": "Swabi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/University-of-Swabi.aspx"
+ },
+ {
+  "id": "pk-university-of-swat",
+  "name": "University of Swat",
+  "city": "Swat",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/University-of-Swat.aspx"
+ },
+ {
+  "id": "pk-university-of-the-punjab",
+  "name": "University of the Punjab",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/University-of-the-Punjab.aspx"
+ },
+ {
+  "id": "pk-university-of-turbat",
+  "name": "University of Turbat",
+  "city": "Turbat",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Balochistan/University-of-Turbat.aspx"
+ },
+ {
+  "id": "pk-university-of-veterinary-animal-sciences",
+  "name": "University of Veterinary & Animal Sciences",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/University-of-Veterinary-and-Animal-Sciences.aspx"
+ },
+ {
+  "id": "pk-university-of-wah",
+  "name": "University of Wah",
+  "city": "Rawalpindi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/University-of-Wah.aspx"
+ },
+ {
+  "id": "pk-virtual-university-of-pakistan",
+  "name": "Virtual University of Pakistan",
+  "city": "Lahore",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Punjab/Virtual-University-of-Pakistan.aspx"
+ },
+ {
+  "id": "pk-woman-university-swabi",
+  "name": "Woman University Swabi",
+  "city": "Swabi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/University-of-Swabi-for-Women.aspx"
+ },
+ {
+  "id": "pk-women-university-mardan",
+  "name": "Women University Mardan",
+  "city": "Mardan",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/KPK/Women-University-Mardan.aspx"
+ },
+ {
+  "id": "pk-women-university-of-azad-jammu-kashmir",
+  "name": "Women University of Azad Jammu & Kashmir",
+  "city": "Bagh",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/AJK/Women-University-of-Azad-Jammu-and-Kashmir.aspx"
+ },
+ {
+  "id": "pk-zia-ud-din-university",
+  "name": "Zia-ud-Din University",
+  "city": "Karachi",
+  "hec": "https://www.hec.gov.pk/english/universities/Pages/Sindh/Zia-ud-Din-University.aspx"
+ }
+]

@@ -1,0 +1,100 @@
+/* Logos: bundled image → website favicon → monogram. */
+.university-logo { position: relative; overflow: hidden; }
+.university-logo.small { width: 40px; height: 40px; padding: 5px; }
+.university-monogram-text { font-size: .95rem; font-weight: 600; letter-spacing: .02em; color: var(--primary); }
+.university-logo.large .university-monogram-text { font-size: 1.5rem; }
+:root[data-theme=dark] .university-logo { background: oklch(.96 0 0); }
+:root[data-theme=dark] .university-monogram-text { color: oklch(.51 .16 350); }
+.university-logo-nust, :root[data-theme=dark] .university-logo-nust { background: oklch(.31 .055 251); }
+
+/* Chance bands share one hue ramp in both themes. */
+:root { --band-far: oklch(.5 .17 25); --band-far-tint: oklch(.95 .04 25); --band-reach: oklch(.52 .13 60); --band-reach-tint: oklch(.96 .045 75); --band-target: oklch(.48 .1 260); --band-target-tint: oklch(.95 .03 260); --band-likely: oklch(.45 .1 160); --band-likely-tint: oklch(.95 .035 160); --band-safety: oklch(.4 .1 150); --band-safety-tint: oklch(.93 .05 150); }
+:root[data-theme=dark] { --band-far: oklch(.8 .13 25); --band-far-tint: oklch(.3 .05 25); --band-reach: oklch(.84 .11 75); --band-reach-tint: oklch(.3 .04 70); --band-target: oklch(.82 .09 260); --band-target-tint: oklch(.3 .04 260); --band-likely: oklch(.82 .09 160); --band-likely-tint: oklch(.29 .04 160); --band-safety: oklch(.85 .11 150); --band-safety-tint: oklch(.29 .05 150); }
+.chance-badge strong { font-weight: 700; margin-right: 1px; }
+.chance-badge.chance-far-reach { color: var(--band-far); background: var(--band-far-tint); }
+.chance-badge.chance-reach { color: var(--band-reach); background: var(--band-reach-tint); }
+.chance-badge.chance-target { color: var(--band-target); background: var(--band-target-tint); }
+.chance-badge.chance-likely { color: var(--band-likely); background: var(--band-likely-tint); }
+.chance-badge.chance-safety { color: var(--band-safety); background: var(--band-safety-tint); }
+
+/* University page: chance headline, meter, factor list. */
+.chance-headline { display: grid; grid-template-columns: minmax(150px, auto) minmax(0, 1fr); gap: 28px; align-items: center; }
+.chance-number { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
+.chance-number > strong { font-size: 3.6rem; font-weight: 600; letter-spacing: -.04em; line-height: 1; color: var(--ink); }
+.chance-number > strong.stat-text { font-size: 1.5rem; letter-spacing: -.02em; line-height: 1.3; }
+.chance-number .badge { font-size: .78rem; padding: 6px 11px; }
+.chance-copy p { font-size: .9rem; max-width: 60ch; line-height: 1.75; }
+.chance-meter { margin-top: 16px; max-width: 520px; }
+.chance-meter-track { position: relative; display: flex; height: 10px; border-radius: 6px; overflow: visible; }
+.chance-meter-band { flex: 1; }
+.chance-meter-band.chance-far-reach { flex: 1; background: var(--band-far-tint); border-radius: 6px 0 0 6px; }
+.chance-meter-band.chance-reach { flex: 1.5; background: var(--band-reach-tint); }
+.chance-meter-band.chance-target { flex: 2.5; background: var(--band-target-tint); }
+.chance-meter-band.chance-likely { flex: 2.5; background: var(--band-likely-tint); }
+.chance-meter-band.chance-safety { flex: 2.5; background: var(--band-safety-tint); border-radius: 0 6px 6px 0; }
+.chance-meter-marker { position: absolute; top: -5px; width: 20px; height: 20px; margin-left: -10px; border-radius: 50%; background: var(--ink); border: 3px solid var(--bg); box-shadow: 0 1px 4px oklch(0 0 0 / .25); transition: left 400ms cubic-bezier(.23, 1, .32, 1); }
+.chance-meter-labels { display: flex; justify-content: space-between; font-size: .66rem; color: var(--muted); margin-top: 9px; }
+.merit-reference { margin-top: 24px; padding: 18px 20px; background: var(--surface); border-radius: 9px; }
+.merit-reference .field { max-width: 560px; }
+.merit-reference input { max-width: 180px; }
+.merit-reference small a { color: var(--primary); text-decoration: underline; text-underline-offset: 3px; }
+.merit-reference .text-button { margin-top: 10px; font-size: .78rem; }
+.chance-factors, .chance-improvements { margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--border); }
+.chance-factors h3, .chance-improvements h3 { font-size: .95rem; }
+.chance-factors > p { font-size: .8rem; margin-top: 7px; max-width: 80ch; }
+.chance-factors ul, .chance-improvements ul { list-style: none; padding: 0; margin: 16px 0 0; display: grid; gap: 0; }
+.chance-factor-row { display: flex; gap: 14px; padding: 13px 0; border-top: 1px solid var(--border); }
+.chance-factor-row:first-child { border-top: 0; }
+.chance-factor-row strong { font-size: .87rem; font-weight: 600; }
+.chance-factor-row p { font-size: .8rem; margin-top: 4px; color: var(--muted); line-height: 1.7; }
+.chance-factor-icon { display: inline-flex; width: 30px; height: 30px; align-items: center; justify-content: center; border-radius: 8px; flex-shrink: 0; background: var(--surface); color: var(--muted); }
+.chance-factor-row.up .chance-factor-icon { background: var(--green-tint); color: var(--green); }
+.chance-factor-row.down .chance-factor-icon { background: var(--band-far-tint); color: var(--band-far); }
+.chance-improvements li { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 11px 0; border-top: 1px solid var(--border); font-size: .86rem; }
+.chance-improvements li:first-child { border-top: 0; }
+.chance-improvements li strong { white-space: nowrap; color: var(--green); font-weight: 600; }
+.chance-improvements .text-button { margin-top: 12px; font-size: .78rem; }
+.chance-disclaimer { display: flex; gap: 8px; align-items: flex-start; font-size: .74rem; margin-top: 22px; line-height: 1.7; max-width: 90ch; }
+.chance-disclaimer svg { flex-shrink: 0; margin-top: 3px; }
+.university-detail .detail-actions { display: flex; gap: 10px; flex-shrink: 0; }
+.university-detail-header .detail-actions .button { white-space: nowrap; }
+
+/* Explorer: filters and card stats. */
+.filter-toolbar .filter-select { max-width: 200px; }
+.catalogue-filters .filter-check { font-size: .8rem; align-self: center; margin-top: 18px; }
+.catalogue-filters .text-button { align-self: center; margin-top: 18px; font-size: .8rem; }
+.catalogue-filters select { width: 210px; }
+.filter-toolbar .button.selected { background: var(--tint); color: var(--primary); border-color: transparent; }
+.uni-description { font-size: .8rem; }
+.fit-row .chance-badge { font-size: .7rem; }
+
+/* Dashboard wishlist chances. */
+.university-mini .chance-badge { font-size: .66rem; }
+.dashboard-chances { margin-top: 27px; }
+.chance-list { display: grid; gap: 0; border: 1px solid var(--border); border-radius: 11px; overflow: hidden; background: var(--bg); }
+.chance-list-row { display: grid; grid-template-columns: 40px minmax(0, 1fr) auto; align-items: center; gap: 14px; padding: 13px 18px; border-top: 1px solid var(--border); text-align: left; background: transparent; border-left: 0; border-right: 0; border-bottom: 0; width: 100%; }
+.chance-list-row:first-child { border-top: 0; }
+.chance-list-row:hover { background: var(--surface); }
+.chance-list-row h3 { font-size: .9rem; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.chance-list-row small { font-size: .74rem; color: var(--muted); display: block; margin-top: 2px; }
+.chance-list-row .chance-badge { font-size: .72rem; }
+.band-legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .72rem; color: var(--muted); margin-top: 14px; }
+.band-legend i { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+
+@media (max-width: 760px) {
+  .chance-headline { grid-template-columns: 1fr; gap: 18px; }
+  .chance-number > strong { font-size: 3rem; }
+  .university-detail .detail-actions { width: 100%; }
+  .university-detail .detail-actions .button { flex: 1; }
+  .filter-toolbar .filter-select { max-width: 100%; }
+  .chance-improvements li { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .chance-list-row { grid-template-columns: 34px minmax(0, 1fr) auto; padding: 12px 14px; gap: 10px; }
+  .chance-list-row h3 { white-space: normal; }
+}
+@media (prefers-reduced-motion: reduce) { .chance-meter-marker { transition: none; } }
+@media (max-width: 650px) {
+  .university-detail .university-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .university-detail .university-stat { padding: 16px; gap: 6px; }
+  .university-detail .university-stat strong { font-size: 1.15rem; }
+  .university-detail .university-stat p { font-size: .72rem; }
+}
