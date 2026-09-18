@@ -41,8 +41,14 @@ const environment = (
     env?: Record<string, string | undefined>;
   }
 ).env;
-const projectUrl = environment?.VITE_SUPABASE_URL?.trim();
-const publicKey = environment?.VITE_SUPABASE_ANON_KEY?.trim();
+/** The production project's public client values. These are safe to publish (row-level security
+ * governs access); they let the deployed app work even when the host injects no VITE_ variables. */
+const PUBLIC_DEFAULTS = {
+  url: "https://kwlfhxegnyvmzekxexto.supabase.co",
+  key: "sb_publishable_X6xTf_VbhIfRJ9Zq5Fn-1A_PdtZBNqG",
+};
+const projectUrl = environment?.VITE_SUPABASE_URL?.trim() || PUBLIC_DEFAULTS.url;
+const publicKey = environment?.VITE_SUPABASE_ANON_KEY?.trim() || PUBLIC_DEFAULTS.key;
 export const cloudConfigured = validCloudConfig(projectUrl, publicKey);
 let client: SupabaseClient | null = null;
 
