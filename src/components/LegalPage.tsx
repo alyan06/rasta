@@ -92,6 +92,26 @@ export default function LegalPage({
               </p>
             </section>
             <section>
+              <h2>AI help (Improve with AI, Polish with AI)</h2>
+              <p>
+                These buttons are the only way AI is used in Rasta; there is no
+                chat box and you cannot send it instructions. When you press
+                one, the text of that activity (with its title, role and
+                organisation) or that essay draft is sent through Rasta’s
+                server to Anthropic’s Claude API with fixed instructions, and
+                the suggestion comes back to you. Anthropic processes it under
+                its API terms. Rasta stores only that you used the feature and
+                how many tokens it took, never the text or the suggestion.
+                Nothing changes in your profile unless you press Keep.
+              </p>
+              <p>
+                To keep the service free, each signed-in account gets a small
+                number of uses per day and there is a daily limit for the whole
+                site. Chance estimates never use AI; they are calculated in your
+                browser from published statistics.
+              </p>
+            </section>
+            <section>
               <h2>Keeping and removing your data</h2>
               <p>
                 You can edit your workspace and export a backup through Rasta.
@@ -141,6 +161,19 @@ export default function LegalPage({
                 and deadlines on the university’s official website before
                 applying. Data coverage varies between universities. Missing
                 information does not mean that a requirement does not exist.
+              </p>
+            </section>
+            <section>
+              <h2>AI suggestions</h2>
+              <p>
+                Improve with AI and Polish with AI return suggestions built
+                from your own words. They can still be wrong. Read every detail
+                before you keep it, and never submit an activity or essay that
+                claims something you did not do. Many universities ask that
+                application writing be your own work and some forbid AI
+                assistance; it is your responsibility to follow the rules of
+                each application you submit. AI help has daily limits and may
+                be paused when the site reaches its overall limit.
               </p>
             </section>
             <section>

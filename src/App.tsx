@@ -310,6 +310,8 @@ export default function App() {
           : text,
       ),
     storageAvailable: !storageError,
+    signedIn: !!account.user,
+    openAccount: () => accountDialog.current?.showModal(),
   };
   const PageComponent = (
     {

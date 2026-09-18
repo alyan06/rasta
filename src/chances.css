@@ -134,3 +134,25 @@
 .grade-chips li strong { font-weight: 600; color: var(--primary); }
 .grade-chips li small { font-size: .66rem; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
 .profile-page .panel-header .button { flex-shrink: 0; }
+
+/* AI help: a fixed action, a suggestion set apart in violet, keep or revert. */
+:root { --ai: oklch(.45 .15 290); --ai-tint: oklch(.96 .03 290); --ai-border: oklch(.82 .08 290); }
+:root[data-theme=dark] { --ai: oklch(.84 .1 290); --ai-tint: oklch(.27 .05 290); --ai-border: oklch(.42 .08 290); }
+.ai-assist { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 14px; }
+.ai-button { color: var(--ai); border-color: var(--ai-border); }
+.ai-button:hover:not(:disabled) { background: var(--ai-tint); }
+.ai-assist-note { font-size: .76rem; color: var(--muted); }
+.ai-suggestion { border: 1px solid var(--ai-border); border-left: 4px solid var(--ai); background: var(--ai-tint); border-radius: 10px; padding: 18px 20px; display: grid; gap: 12px; }
+.ai-suggestion-header { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.ai-suggestion-title { display: inline-flex; align-items: center; gap: 6px; font-size: .8rem; font-weight: 600; color: var(--ai); letter-spacing: .01em; }
+.ai-suggestion-meta { font-size: .74rem; color: var(--muted); }
+.ai-suggestion-text { color: var(--ai); font-size: .95rem; line-height: 1.8; white-space: pre-wrap; }
+.ai-suggestion-notes { margin: 0; padding-left: 18px; font-size: .8rem; color: var(--muted); line-height: 1.7; }
+.ai-suggestion .button-row { gap: 10px; }
+.ai-keep { background: var(--ai); }
+.ai-keep:hover:not(:disabled) { background: var(--ai); filter: brightness(.92); }
+.ai-suggestion-footnote { font-size: .72rem; color: var(--muted); line-height: 1.6; }
+.char-counter { display: block; margin-top: 5px; font-size: .72rem; color: var(--muted); }
+.char-counter.over { color: var(--band-far); font-weight: 600; }
+.essay-ai-row { display: flex; flex-direction: column; gap: 10px; }
+.activity-editor .ai-assist { margin-top: -6px; }

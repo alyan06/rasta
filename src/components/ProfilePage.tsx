@@ -3,6 +3,8 @@ import { ArrowRight, Check, FloppyDisk, PencilSimple, Plus, Trash, ArrowCounterC
 import type { Activity, Profile, SubjectGrade, WorkspaceProps } from '../types';
 import { ACTIVITY_TYPES, IBCC_SOURCES, PROGRAMME_GROUPS, SUBJECTS, academicSummary, migrateProfile, newActivity, normalizeSubject, programmeCategory } from '../lib/academics';
 import { isProfile } from '../lib/storage';
+import { COMMON_APP, aiErrorMessage, aiImproveActivity } from '../lib/ai';
+import { AiAssistButton, AiSuggestion, useAiRemaining } from './AiAssist';
 
 const blank: Profile = { name: '', city: '', curriculum: 'fsc', stage: 'awaiting', major: 'computing', ssc: '', hssc: '', net: '', nu: '', sat: '', mathematics: false, budget: '', activities: '', isDemo: false, secondary: 'matric', higherSecondary: 'fsc', oLevels: [], aLevels: [], predictedHssc: '', activityEntries: [], familyIncome: '' };
 type ScoreKey = 'ssc' | 'hssc' | 'predictedHssc' | 'net' | 'nu' | 'sat' | 'familyIncome';
@@ -30,7 +32,9 @@ function profileProblems(profile: Profile): string[] {
   return errors;
 }
 
-export default function ProfilePage({ data, update, navigate, notify }: WorkspaceProps) {
+const counter = (value: string, limit: number) => <small className={`char-counter ${value.length > limit ? 'over' : ''}`} aria-live="polite">{value.length}/{limit}{value.length > limit ? ' · over the Common App limit' : ''}</small>;
+
+export default function ProfilePage({ data, update, navigate, notify, signedIn, openAccount }: WorkspaceProps) {
   const [draft, setDraft] = useState<Profile>(() => migrateProfile(data.profile));
   const [attempted, setAttempted] = useState(false);
   const [fresh, setFresh] = useState(false);
@@ -58,6 +62,20 @@ export default function ProfilePage({ data, update, navigate, notify }: Workspac
   const changed = fresh || JSON.stringify(draft) !== JSON.stringify(migrateProfile(data.profile));
   const activityEntries = draft.activityEntries ?? [];
   const editActivity = (id: string, patch: Partial<Activity>) => set('activityEntries', activityEntries.map(activity => activity.id === id ? { ...activity, ...patch } : activity));
+  const [aiRemaining, setAiRemaining] = useAiRemaining(signedIn);
+  const [aiBusy, setAiBusy] = useState<string | null>(null);
+  const [aiSuggestion, setAiSuggestion] = useState<{ id: string; text: string } | null>(null);
+  const [aiError, setAiError] = useState<{ id: string; message: string } | null>(null);
+  async function improveActivity(activity: Activity) {
+    setAiBusy(activity.id); setAiError(null); setAiSuggestion(null);
+    try {
+      const result = await aiImproveActivity(activity);
+      setAiSuggestion({ id: activity.id, text: result.improved });
+      setAiRemaining({ activity: result.remaining });
+    } catch (error) {
+      setAiError({ id: activity.id, message: aiErrorMessage(error, 'activity') });
+    } finally { setAiBusy(null); }
+  }
 
   function scoreField(key: ScoreKey, label: string, hint: string, min = 0, max = 100, step = '0.01') {
     return <label className="field"><span>{label}</span><input type="number" value={draft[key] ?? ''} min={min} max={max} step={step} placeholder="Not added yet" onChange={event => set(key, event.target.value === '' ? '' : Number(event.target.value))} /><small className="muted">{hint}</small></label>;
@@ -119,9 +137,13 @@ export default function ProfilePage({ data, update, navigate, notify }: Workspac
         {activityEntries.map((activity, index) => <fieldset className="activity-editor" key={activity.id}><legend>Activity {index + 1}{activity.title ? ` · ${activity.title}` : ''}</legend><div className="form-grid">
           <label className="field"><span>Activity name</span><input maxLength={120} value={activity.title} onChange={event => editActivity(activity.id, { title: event.target.value })} placeholder="e.g. Science club website" /></label>
           <label className="field"><span>Type</span><select value={activity.type} onChange={event => editActivity(activity.id, { type: event.target.value })}>{ACTIVITY_TYPES.map(type => <option key={type}>{type}</option>)}</select></label>
-          <label className="field"><span>Your role</span><input maxLength={100} value={activity.role} onChange={event => editActivity(activity.id, { role: event.target.value })} placeholder="e.g. Developer and coordinator" /></label>
-          <label className="field"><span>Where</span><input maxLength={140} value={activity.organization} onChange={event => editActivity(activity.id, { organization: event.target.value })} placeholder="School, club, workplace, home or on your own" /></label>
-        </div><label className="field"><span>Description — what did you do, and what came of it?</span><textarea rows={3} maxLength={5000} value={activity.description} onChange={event => editActivity(activity.id, { description: event.target.value })} placeholder="Your own contribution and any results. Specific and honest beats impressive-sounding." /></label><div className="form-grid">
+          <label className="field"><span>Your role</span><input maxLength={Math.max(COMMON_APP.role, activity.role.length)} value={activity.role} onChange={event => editActivity(activity.id, { role: event.target.value })} placeholder="e.g. Developer and coordinator" />{counter(activity.role, COMMON_APP.role)}</label>
+          <label className="field"><span>Where</span><input maxLength={Math.max(COMMON_APP.organization, activity.organization.length)} value={activity.organization} onChange={event => editActivity(activity.id, { organization: event.target.value })} placeholder="School, club, workplace, home or on your own" />{counter(activity.organization, COMMON_APP.organization)}</label>
+        </div><label className="field"><span>Description — what did you do, and what came of it?</span><textarea rows={3} maxLength={Math.max(COMMON_APP.description, activity.description.length)} value={activity.description} onChange={event => { editActivity(activity.id, { description: event.target.value }); if (aiSuggestion?.id === activity.id) setAiSuggestion(null); }} placeholder="Your own contribution and any results. Specific and honest beats impressive-sounding." />{counter(activity.description, COMMON_APP.description)}<small className="muted">Common App allows 150 characters here, 50 for your role and 100 for the organisation.</small></label>
+        <AiAssistButton label="Improve with AI" busy={aiBusy === activity.id} remaining={aiRemaining?.activity} signedIn={signedIn} openAccount={openAccount} disabledReason={activity.description.trim().length < 20 ? 'Write at least 20 characters first.' : undefined} onClick={() => void improveActivity(activity)} />
+        {aiError?.id === activity.id && <p className="field-error" role="alert">{aiError.message}</p>}
+        {aiSuggestion?.id === activity.id && <AiSuggestion title="AI suggestion · Common App style" text={aiSuggestion.text} meta={`${aiSuggestion.text.length}/${COMMON_APP.description}`} onKeep={() => { editActivity(activity.id, { description: aiSuggestion.text }); setAiSuggestion(null); notify('Kept the AI version. Save your profile when you’re done.'); }} onRevert={() => setAiSuggestion(null)} />}
+        <div className="form-grid">
           <label className="field"><span>Start date</span><input type="date" min="1900-01-01" max="2100-12-31" value={activity.startDate} onChange={event => editActivity(activity.id, { startDate: event.target.value })} /></label>
           <label className="field"><span>End date</span><input type="date" min={activity.startDate || '1900-01-01'} max="2100-12-31" value={activity.endDate} disabled={activity.ongoing} onChange={event => editActivity(activity.id, { endDate: event.target.value })} /></label>
           <label className="field"><span>Hours per week</span><input type="number" min={0} max={168} step="0.5" value={activity.hoursPerWeek} onChange={event => editActivity(activity.id, { hoursPerWeek: event.target.value === '' ? '' : Number(event.target.value) })} /></label>

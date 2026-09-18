@@ -54,9 +54,11 @@ export function activityStrength(entries: Activity[] | undefined, legacyNotes: s
     const hours = typeof item.hoursPerWeek === 'number' ? item.hoursPerWeek : 0;
     const weeks = typeof item.weeksPerYear === 'number' ? item.weeksPerYear : 0;
     const depth = clamp((hours * Math.max(weeks, hours ? 20 : 0)) / 400, 0, 1);
-    const described = item.description.trim().length > 60 ? 0.35 : item.description.trim() ? 0.15 : 0;
+    // Common App descriptions are capped at 150 characters, so 40 already signals a real description.
+    const described = item.description.trim().length >= 40 ? 0.35 : item.description.trim() ? 0.15 : 0;
     const role = /lead|found|captain|president|head|organi[sz]er|manager|editor/i.test(`${item.role} ${item.title}`) || ['Leadership', 'Research', 'Work'].includes(item.type) ? 0.25 : 0;
-    score += 0.25 + depth * 0.4 + described + role;
+    const recognition = /\b(national|international|award|winner|won|first place|1st|selected|published|olympiad)\b/i.test(`${item.title} ${item.description}`) ? 0.15 : 0;
+    score += 0.25 + depth * 0.4 + described + role + recognition;
   }
   return clamp(score / 4.5, 0, 1);
 }

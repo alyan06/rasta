@@ -18,6 +18,8 @@ import {
   PRACTICE_PROMPTS,
   type StoryDetails,
 } from "../lib/essay";
+import { AI_LIMITS, aiErrorMessage, aiPolishEssay } from "../lib/ai";
+import { AiAssistButton, AiSuggestion, useAiRemaining } from "./AiAssist";
 
 const STORY_FIELDS: {
   key: keyof StoryDetails;
@@ -55,6 +57,8 @@ export default function EssaysPage({
   update,
   notify,
   storageAvailable = true,
+  signedIn,
+  openAccount,
 }: WorkspaceProps) {
   const [selectedId, setSelectedId] = useState<string | null>(
     data.essays[0]?.id ?? null,
@@ -68,6 +72,21 @@ export default function EssaysPage({
   const wordCount = countWords(draft?.content ?? "");
   const checks = getWritingChecks(draft?.content ?? "", wordLimit);
   const hasStory = Object.values(story).some((value) => value.trim());
+  const [aiRemaining, setAiRemaining] = useAiRemaining(signedIn);
+  const [aiBusy, setAiBusy] = useState(false);
+  const [aiSuggestion, setAiSuggestion] = useState<{ id: string; text: string; changes: string[]; words: number } | null>(null);
+  const [aiError, setAiError] = useState<string | null>(null);
+  async function polishDraft() {
+    if (!draft) return;
+    setAiBusy(true); setAiError(null); setAiSuggestion(null);
+    try {
+      const result = await aiPolishEssay(draft);
+      setAiSuggestion({ id: draft.id, text: result.polished, changes: result.changes, words: result.words });
+      setAiRemaining({ essay: result.remaining });
+    } catch (error) {
+      setAiError(aiErrorMessage(error, "essay"));
+    } finally { setAiBusy(false); }
+  }
 
   function changeDraft(patch: Partial<EssayDraft>) {
     if (!draft) return;
@@ -363,15 +382,30 @@ export default function EssaysPage({
                 </div>
               )}
 
+              <div className="essay-ai-row">
+                <AiAssistButton label="Polish with AI" busy={aiBusy} remaining={aiRemaining?.essay} signedIn={signedIn} openAccount={openAccount} disabledReason={wordCount < AI_LIMITS.essay.minWords ? `Write at least ${AI_LIMITS.essay.minWords} words first — the AI polishes your draft, it doesn’t write it.` : wordCount > AI_LIMITS.essay.maxWords ? `Trim the draft under ${AI_LIMITS.essay.maxWords} words first.` : undefined} onClick={() => void polishDraft()} />
+                {aiError && <p className="field-error" role="alert">{aiError}</p>}
+              </div>
+              {aiSuggestion?.id === draft.id && (
+                <AiSuggestion
+                  title="Polished draft · your voice, tidier"
+                  text={aiSuggestion.text}
+                  notes={aiSuggestion.changes}
+                  meta={`${aiSuggestion.words} / ${wordLimit} words`}
+                  onKeep={() => { changeDraft({ content: aiSuggestion.text }); setAiSuggestion(null); notify("Kept the polished draft. Read it once more in your own voice."); }}
+                  onRevert={() => setAiSuggestion(null)}
+                />
+              )}
               <label className="field essay-content-field">
                 <span>Your draft</span>
                 <textarea
                   className="essay-editor"
                   rows={17}
                   value={draft.content}
-                  onChange={(event) =>
-                    changeDraft({ content: event.target.value })
-                  }
+                  onChange={(event) => {
+                    changeDraft({ content: event.target.value });
+                    if (aiSuggestion) setAiSuggestion(null);
+                  }}
                   placeholder={
                     "Start with a moment. Where were you? What did you notice? What did you decide to do?\n\nIt does not have to sound perfect yet."
                   }

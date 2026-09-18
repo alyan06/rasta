@@ -141,4 +141,8 @@ export interface WorkspaceProps {
   navigate: (page: Page) => void;
   notify: (message: string) => void;
   storageAvailable?: boolean;
+  /** True when a Google account session is active (AI help needs one). */
+  signedIn?: boolean;
+  /** Opens the account dialog so a page can offer sign-in in context. */
+  openAccount?: () => void;
 }

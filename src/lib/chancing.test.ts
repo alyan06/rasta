@@ -81,6 +81,10 @@ test('activity strength rewards depth and description rather than count alone', 
   const shallow = activityStrength([activity('Club', 1, 10, 'Member.')], '');
   const deep = activityStrength([activity('Club'), activity('Research'), activity('Work')], '');
   assert.ok(shallow < deep && deep <= 1);
+  // Recognition words add a little; a 150-character Common App description counts as fully described.
+  const plain = activityStrength([activity('Debate', 4, 30, 'Prepared cases and spoke at weekly inter-school debates for two years.')], '');
+  const recognised = activityStrength([activity('Debate', 4, 30, 'Prepared cases and spoke at weekly inter-school debates; won the national final.')], '');
+  assert.ok(recognised > plain);
 });
 
 test('wishlist plans use reported merit references by default and SAT midpoints for US entries', () => {
