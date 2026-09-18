@@ -8,7 +8,7 @@ export function UniversityLogo({ university, size = 'default' }: { university: U
   const [index, setIndex] = useState(0);
   const source = candidates[index];
   return <span className={`university-logo university-logo-${university.id} ${size}`} aria-hidden="true" data-monogram={monogram(university)}>
-    {source ? <img src={source} alt="" loading="lazy" referrerPolicy="no-referrer" onError={() => setIndex(index + 1)} /> : <span className="university-monogram-text">{monogram(university)}</span>}
+    {source ? <img src={source} alt="" loading="lazy" referrerPolicy="no-referrer" onError={() => setIndex(index + 1)} onLoad={event => { /* The favicon service answers a 16px placeholder when a site has no icon; a monogram reads better. */ if (!university.logo && event.currentTarget.naturalWidth < 24) setIndex(index + 1); }} /> : <span className="university-monogram-text">{monogram(university)}</span>}
   </span>;
 }
 

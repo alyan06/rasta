@@ -15,9 +15,6 @@ import {
   UploadSimple,
   ShieldCheck,
   ArrowRight,
-  Desktop,
-  Moon,
-  Sun,
 } from "@phosphor-icons/react";
 import type { AppData, Page, WorkspaceProps } from "./types";
 import {
@@ -40,7 +37,8 @@ import UniversityPage from "./components/UniversityPage";
 import ContactPage from "./components/ContactPage";
 import LegalPage from "./components/LegalPage";
 import AccountPanel from "./components/AccountPanel";
-import { useTheme, type Theme } from "./hooks/useTheme";
+import { useTheme } from "./hooks/useTheme";
+import ThemeToggle from "./components/ThemeToggle";
 import { useCloudAccount } from "./hooks/useCloudAccount";
 import { universities } from "./lib/admissions";
 
@@ -433,9 +431,6 @@ export default function App() {
               >
                 <Icon size={20} weight={page === id ? "fill" : "regular"} />
                 <span>{label}</span>
-                {id === "universities" && (
-                  <span className="nav-count">{universities.length}</span>
-                )}
               </a>
             ))}
           </nav>
@@ -490,41 +485,13 @@ export default function App() {
               <strong>{pageLabel}</strong>
             </div>
             <div className="topbar-right">
-              <label className="theme-picker">
-                {theme === "dark" ? (
-                  <Moon size={17} />
-                ) : theme === "light" ? (
-                  <Sun size={17} />
-                ) : (
-                  <Desktop size={17} />
-                )}
-                <select
-                  aria-label="Appearance"
-                  value={theme}
-                  onChange={(e) => setTheme(e.target.value as Theme)}
-                >
-                  <option value="system">System</option>
-                  <option value="light">Light</option>
-                  <option value="dark">Dark</option>
-                </select>
-              </label>
-              <span className="device-status">
-                <CheckCircle size={16} weight="fill" />
-                {storageError
-                  ? "Backup needed"
-                  : account.status === "synced"
-                    ? "Saved to your account"
-                    : account.status === "saving"
-                      ? "Syncing…"
-                      : account.status === "error"
-                        ? "Cloud saving paused"
-                        : account.status === "choice" ||
-                            account.status === "conflict"
-                          ? "Choose a saved version"
-                          : account.status === "loading"
-                            ? "Checking your account…"
-                            : "Saved on this device"}
-              </span>
+              <ThemeToggle theme={theme} setTheme={setTheme} compact />
+              {(storageError || account.status === "error") && (
+                <span className="device-status attention">
+                  <CheckCircle size={16} weight="fill" />
+                  {storageError ? "Backup needed" : "Cloud saving paused"}
+                </span>
+              )}
               <button
                 className="button secondary account-trigger"
                 onClick={() => accountDialog.current?.showModal()}

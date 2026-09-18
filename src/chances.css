@@ -98,3 +98,39 @@
   .university-detail .university-stat strong { font-size: 1.15rem; }
   .university-detail .university-stat p { font-size: .72rem; }
 }
+
+/* Theme slider: three radios in a pill, thumb glides to the checked one. */
+.theme-toggle { --segments: 3; position: relative; display: inline-grid; grid-template-columns: repeat(var(--segments), 1fr); align-items: stretch; margin: 0; padding: 3px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); min-width: 0; }
+.theme-toggle-thumb { position: absolute; top: 3px; bottom: 3px; left: 3px; width: calc((100% - 6px) / var(--segments)); border-radius: 999px; background: var(--bg); box-shadow: 0 1px 3px oklch(0 0 0 / .18); transform: translateX(calc(var(--thumb-index) * 100%)); transition: transform 220ms cubic-bezier(.23, 1, .32, 1); pointer-events: none; }
+.theme-toggle label { position: relative; z-index: 1; display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 6px 13px; border-radius: 999px; font-size: .76rem; color: var(--muted); cursor: pointer; white-space: nowrap; transition: color 160ms; }
+.theme-toggle label.selected { color: var(--ink); }
+.theme-toggle input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; }
+.theme-toggle:has(input:focus-visible) { outline: 3px solid oklch(.6 .16 350); outline-offset: 3px; }
+.theme-toggle.compact label { padding: 6px 10px; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.device-status.attention { color: var(--caution); }
+@media (prefers-reduced-motion: reduce) { .theme-toggle-thumb { transition: none; } }
+
+/* University cards: the title link stretches over the whole card; the bookmark sits above it. */
+.university-card-link { position: relative; }
+.university-card-link .card-stretch::after { content: ""; position: absolute; inset: 0; border-radius: 11px; }
+.university-card-link .save-button { position: relative; z-index: 1; }
+.university-card-link:hover { border-color: var(--primary); }
+.university-card-link:focus-within { outline: 2px solid var(--primary); outline-offset: 3px; }
+.university-card .location { margin-top: 8px; }
+.uni-chips { display: flex; flex-wrap: wrap; gap: 7px; margin-top: auto; padding-top: 18px; }
+.uni-chips .badge { font-size: .68rem; padding: 6px 9px; white-space: normal; text-align: left; }
+.uni-chips .badge svg { flex-shrink: 0; }
+
+/* Profile: saved grades read as text until the student presses Edit. */
+.grade-view { padding: 4px 0 2px; }
+.grade-view-title { font-size: .8rem; color: var(--muted); margin-bottom: 10px; }
+.grade-view-value { font-size: 1.6rem; font-weight: 500; letter-spacing: -.02em; }
+.grade-view-row { display: flex; flex-wrap: wrap; gap: 10px 28px; }
+.grade-view-row span { font-size: .84rem; color: var(--muted); display: inline-flex; flex-direction: column; gap: 4px; }
+.grade-view-row strong { font-size: 1.25rem; color: var(--ink); font-weight: 500; }
+.grade-chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.grade-chips li { display: inline-flex; align-items: center; gap: 8px; padding: 7px 11px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); font-size: .82rem; }
+.grade-chips li strong { font-weight: 600; color: var(--primary); }
+.grade-chips li small { font-size: .66rem; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.profile-page .panel-header .button { flex-shrink: 0; }

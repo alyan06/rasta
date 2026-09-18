@@ -16,8 +16,7 @@ import {
   calculateAggregate,
 } from "../lib/admissions";
 import { profileCompletion } from "../lib/storage";
-import { BANDS, checkChances } from "../lib/chancing";
-import { ChanceBadge, UniversityLogo } from "./UniversityBits";
+import { UniversityLogo } from "./UniversityBits";
 
 export default function Dashboard({ data, navigate }: WorkspaceProps) {
   const { profile } = data;
@@ -29,9 +28,6 @@ export default function Dashboard({ data, navigate }: WorkspaceProps) {
   const targetAggregate = calculateAggregate("nust", profile, targetNet);
   const wishlist = universities.filter((u) => data.saved.includes(u.id));
   const selected = wishlist.slice(0, 3);
-  const chances = profile.isDemo
-    ? []
-    : wishlist.map((u) => ({ university: u, review: checkChances(u, profile) })).sort((a, b) => (b.review.probability ?? -1) - (a.review.probability ?? -1));
   const aggregate =
     profile.net === ""
       ? null
@@ -200,7 +196,7 @@ export default function Dashboard({ data, navigate }: WorkspaceProps) {
         <div className="section-heading">
           <div>
             <h2>Your university wishlist</h2>
-            <p>Open a university to see its requirements and check your profile.</p>
+            <p>Open a university to see its numbers and check your chances.</p>
           </div>
           <button
             className="text-button"
@@ -228,7 +224,7 @@ export default function Dashboard({ data, navigate }: WorkspaceProps) {
                     {u.city}, {u.country}
                   </span>
                   <div className="uni-card-bottom">
-                    {profile.isDemo ? <span className={`badge ${a.tone}`}>{a.label}</span> : <ChanceBadge probability={checkChances(u, profile).probability} band={checkChances(u, profile).band} label={a.label} />}
+                    <span className={`badge ${a.tone}`}>{a.label}</span>
                     <ArrowUpRight size={18} />
                   </div>
                 </button>
@@ -251,29 +247,6 @@ export default function Dashboard({ data, navigate }: WorkspaceProps) {
           </div>
         )}
       </section>
-      {chances.length > 0 && (
-        <section className="dashboard-chances">
-          <div className="section-heading">
-            <div>
-              <h2>Your chances, side by side</h2>
-              <p>Estimates from published admission data and your profile. Aim for a mix of safety, target and reach universities.</p>
-            </div>
-          </div>
-          <div className="chance-list">
-            {chances.map(({ university, review }) => (
-              <button key={university.id} className="chance-list-row" onClick={() => navigate(`university/${university.id}`)}>
-                <UniversityLogo university={university} size="small" />
-                <div>
-                  <h3>{university.shortName}</h3>
-                  <small>{review.probability === null ? review.summary : review.assessment.aggregate !== undefined ? `${review.assessment.aggregate.toFixed(1)}% aggregate · ${review.factors[1]?.label ?? ''}` : university.facts?.acceptanceRate !== undefined ? `${university.facts.acceptanceRate}% admit rate · ${university.satStats?.low !== undefined ? `SAT ${university.satStats.low}–${university.satStats.high}` : 'no SAT range published'}` : university.city}</small>
-                </div>
-                <ChanceBadge probability={review.probability} band={review.band} label={review.probability === null ? (university.model !== 'holistic' ? 'Add test score' : review.label === 'Add your grades first' ? 'Add grades' : 'No public data') : undefined} />
-              </button>
-            ))}
-          </div>
-          <div className="band-legend">{(Object.keys(BANDS) as (keyof typeof BANDS)[]).map((band) => <span key={band}><i className={`chance-${band}`} style={{ background: `var(--band-${band === 'far-reach' ? 'far' : band})` }} />{BANDS[band].label} · {BANDS[band].range}</span>)}</div>
-        </section>
-      )}
       <div className="dashboard-bottom">
         <section className="essay-invitation">
           <span className="feature-icon">

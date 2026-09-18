@@ -40,22 +40,30 @@ test('merit-route chances follow the editable closing aggregate', async ({ page 
   await expect(reference).toHaveValue('73');
 });
 
-test('the dashboard compares wishlist chances and the explorer filters by admit rate', async ({ page }) => {
+test('chances stay on the university page; the explorer shows test policy and scholarships and filters by admit rate', async ({ page }) => {
   await seedSample(page, { profile: student, saved: ['mit', 'nust', 'us-166027', 'asu'] });
   await page.goto('/#dashboard');
-  const rows = page.locator('.chance-list-row');
-  await expect(rows).toHaveCount(4);
-  await expect(rows.first().locator('.chance-badge')).toContainText(/%/);
+  await expect(page.locator('.chance-badge')).toHaveCount(0);
   await page.goto('/#universities');
+  await expect(page.locator('.chance-badge')).toHaveCount(0);
+  const first = page.locator('.university-card').first();
+  await expect(first.locator('.uni-chips .badge')).toHaveCount(2);
+  await expect(first).not.toContainText(/my chances/i);
   await page.getByRole('button', { name: /Filters/ }).click();
   await page.getByLabel('Admit rate').selectOption('under10');
   await expect(page.locator('.results-heading')).toContainText(/\d+ universities/);
   const cards = page.locator('.university-card');
   await expect(cards.first()).toBeVisible();
   const count = await cards.count();
-  for (let index = 0; index < Math.min(count, 6); index += 1) await expect(cards.nth(index)).toContainText(/\d(\.\d)?% admitted|SAT avg|SAT \d/);
+  for (let index = 0; index < Math.min(count, 6); index += 1) await expect(cards.nth(index).locator('.uni-chips')).toContainText(/SAT|test/i);
+  await page.getByLabel('Scholarships').selectOption('yes');
+  await expect(cards.first().locator('.uni-chips')).toContainText(/Scholarships/);
+  await page.getByLabel('Scholarships').selectOption('all');
   await page.getByLabel('Admit rate').selectOption('all');
   await page.getByLabel('Search universities').fill('Aga Khan');
   await expect(cards.first()).toContainText('Aga Khan University');
-  await expect(cards.first()).toContainText('No public data');
+  await expect(cards.first().locator('.uni-chips')).toContainText(/check/i);
+  // The whole card is the link: clicking its body opens the university page.
+  await cards.first().click({ position: { x: 40, y: 160 } });
+  await expect(page).toHaveURL(/#university\/pk-aga-khan-university$/);
 });

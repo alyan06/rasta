@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
-import { ArrowLeft, ArrowRight, Check, GraduationCap, Moon, Sun, Desktop, ShieldCheck } from '@phosphor-icons/react';
+import { ArrowLeft, ArrowRight, Check, GraduationCap, ShieldCheck } from '@phosphor-icons/react';
+import ThemeToggle from './ThemeToggle';
 import type { Profile } from '../types';
 import type { Theme } from '../hooks/useTheme';
 
@@ -19,7 +20,7 @@ export default function Onboarding({ profile, onComplete, onExplore, onSignIn, t
     onComplete({ ...profile, name: name.trim(), city: profile.isDemo ? '' : profile.city, secondary, higherSecondary: higher, curriculum: higher === 'alevel' ? 'alevel' : 'fsc', stage: result, isDemo: false, onboardingCompleted: true, ssc: profile.isDemo ? '' : profile.ssc, hssc: profile.isDemo ? '' : profile.hssc, predictedHssc: '', oLevels: profile.isDemo ? [] : profile.oLevels, aLevels: profile.isDemo ? [] : profile.aLevels, activityEntries: profile.isDemo ? [] : profile.activityEntries, activities: profile.isDemo ? '' : profile.activities, net: profile.isDemo ? '' : profile.net, nu: profile.isDemo ? '' : profile.nu, sat: profile.isDemo ? '' : profile.sat, budget: profile.isDemo ? '' : profile.budget, familyIncome: profile.isDemo ? '' : profile.familyIncome });
   }
   return <div className="onboarding-shell">
-    <header className="onboarding-header"><a href="#dashboard" className="wordmark" onClick={e => e.preventDefault()}><img src="/favicon.svg" alt=""/><span>rasta<span className="brand-period">.</span></span></a><label className="theme-picker">{theme === 'dark' ? <Moon size={18}/> : theme === 'light' ? <Sun size={18}/> : <Desktop size={18}/>}<select aria-label="Appearance" value={theme} onChange={e => setTheme(e.target.value as Theme)}><option value="system">System theme</option><option value="light">Light</option><option value="dark">Dark</option></select></label></header>
+    <header className="onboarding-header"><a href="#dashboard" className="wordmark" onClick={e => e.preventDefault()}><img src="/favicon.svg" alt=""/><span>rasta<span className="brand-period">.</span></span></a><ThemeToggle theme={theme} setTheme={setTheme} /></header>
     <main className="onboarding-main">
       <div className="onboarding-symbol"><GraduationCap size={36} weight="duotone"/></div>
       {step === -1 ? <section className="welcome-step"><span className="onboarding-eyebrow">Made for students in Pakistan</span><h1 ref={heading} tabIndex={-1}>Your university journey<br/>starts here.</h1><p>Find universities, understand your chances, and make a plan. Start with a few simple questions.</p><button className="button onboarding-primary" onClick={() => setStep(0)}>Set up my profile <ArrowRight size={20}/></button>{!signedIn && <button className="button secondary google-button" onClick={onSignIn}><span className="google-letter" aria-hidden="true">G</span> Sign in with Google</button>}<button className="text-button explore-sample" onClick={onExplore}>Explore a sample profile first <ArrowUpRightSmall/></button><span className="onboarding-privacy"><ShieldCheck size={16}/>Your grades and story stay yours.</span></section> : <section className="onboarding-step" key={step}>

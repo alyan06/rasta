@@ -17,8 +17,15 @@ test('new student completes one question at a time and keeps predicted-result se
   await page.getByRole('button', { name: 'Not yet Use my predicted grades' }).click();
   await page.getByRole('button', { name: 'Add my grades' }).click();
   await expect(page.getByLabel('Name', { exact: true })).toHaveValue('Hamza');
-  await expect(page.getByLabel('Predicted final FSc percentage')).toBeVisible();
+  // Grades read as text until the student opens the editor; a new profile offers "Add grades".
+  await expect(page.getByLabel('Predicted final FSc percentage')).toHaveCount(0);
+  await page.getByRole('button', { name: 'Add grades' }).nth(1).click();
+  await page.getByLabel('Predicted final FSc percentage').fill('84');
+  await page.getByRole('button', { name: 'Done' }).click();
+  await expect(page.getByLabel('Predicted final FSc percentage')).toHaveCount(0);
+  await expect(page.locator('.grade-view')).toContainText('Predicted final 84%');
   await page.reload();
+  await expect(page.locator('.grade-view')).toContainText('84%');
   await expect(page.getByLabel('Name', { exact: true })).toHaveValue('Hamza');
   const profile = await page.evaluate(() => JSON.parse(localStorage.getItem('rasta.workspace.v1')!).profile);
   expect(profile.stage).toBe('awaiting');
@@ -30,11 +37,11 @@ test('theme follows system by default and persists an explicit choice', async ({
   await page.emulateMedia({ colorScheme: 'dark' });
   await page.goto('/');
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
-  await page.getByLabel('Appearance').filter({ visible: true }).selectOption('light');
+  await page.getByRole('group', { name: 'Appearance' }).filter({ visible: true }).getByLabel('Light').check();
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
   await page.reload();
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
-  await page.getByLabel('Appearance').filter({ visible: true }).selectOption('system');
+  await page.getByRole('group', { name: 'Appearance' }).filter({ visible: true }).getByLabel('System').check();
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
   await page.emulateMedia({ colorScheme: 'light' });
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
@@ -56,7 +63,7 @@ test('welcome and animated questions are accessible in both themes with reduced 
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto('/');
   for (const theme of ['light', 'dark']) {
-    await page.getByLabel('Appearance').filter({ visible: true }).selectOption(theme);
+    await page.getByRole('group', { name: 'Appearance' }).filter({ visible: true }).getByLabel(theme === 'light' ? 'Light' : 'Dark').check();
     const result = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze();
     expect(result.violations, theme).toEqual([]);
   }

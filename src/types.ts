@@ -69,6 +69,11 @@ export interface UniversityFacts {
   roomAndBoard?: number;
   locale?: 'city' | 'suburb' | 'town' | 'rural';
   hbcu?: boolean;
+  /** Percent of full-time first-year students awarded institutional grant aid, and the average award (USD). */
+  scholarshipPct?: number;
+  scholarshipAvg?: number;
+  /** Hand-checked: the institution offers merit or need-based scholarships. */
+  scholarships?: boolean;
 }
 export interface Source {
   label: string;

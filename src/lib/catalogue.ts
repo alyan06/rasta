@@ -11,7 +11,7 @@ export const US_STATES: Record<string, string> = { AL: 'Alabama', AK: 'Alaska', 
 export const PK_PROVINCES = ['Punjab', 'Sindh', 'Khyber Pakhtunkhwa', 'Balochistan', 'Islamabad Capital Territory', 'Azad Jammu & Kashmir', 'Gilgit Baltistan'];
 
 type PkRow = [string, string, string, string, string, string, string, string, string, string];
-type UsRow = [string, string, string, string, string, number, number | null, number | null, number | null, number | null, number | null, number | null, number | null, number | null, number | null, number | null, number | null, number | null, string, number, number | null];
+type UsRow = [string, string, string, string, string, number, number | null, number | null, number | null, number | null, number | null, number | null, number | null, number | null, number | null, number | null, number | null, number | null, string, number, number | null, number | null, number | null];
 const pkRows = catalogue.pakistan as PkRow[];
 const usRows = catalogue.usa as UsRow[];
 const testPolicies: Record<number, UniversityFacts['testPolicy']> = { 1: 'required', 5: 'optional', 3: 'blind' };
@@ -20,7 +20,7 @@ const round = (value: number, places = 1) => Math.round(value * 10 ** places) / 
 export const compactNumber = (value: number) => value >= 1000 ? `${round(value / 1000, value >= 10000 ? 0 : 1)}k` : String(value);
 
 export function usFacts(row: UsRow): UniversityFacts {
-  const [, , , state, , control, undergraduates, applicants, admitted, enrolled, sat25, sat75, satSubmitters, act25, act75, policy, tuition, roomAndBoard, locale, hbcu] = row;
+  const [, , , state, , control, undergraduates, applicants, admitted, enrolled, sat25, sat75, satSubmitters, act25, act75, policy, tuition, roomAndBoard, locale, hbcu, , grantPct, grantAvg] = row;
   const facts: UniversityFacts = { year: US_DATA_YEAR, source: DIRECTORY_SOURCES.USA, state, control: controls[control] };
   if (undergraduates !== null) facts.undergraduates = undergraduates;
   if (applicants !== null && admitted !== null && applicants > 0) { facts.applicants = applicants; facts.admitted = admitted; facts.acceptanceRate = round(Math.min(100, admitted / applicants * 100)); }
@@ -33,8 +33,12 @@ export function usFacts(row: UsRow): UniversityFacts {
   if (roomAndBoard !== null) facts.roomAndBoard = roomAndBoard;
   if (locale) facts.locale = locale as UniversityFacts['locale'];
   if (hbcu) facts.hbcu = true;
+  if (grantPct !== null) { facts.scholarshipPct = grantPct; facts.scholarships = grantPct > 0; }
+  if (grantAvg !== null) facts.scholarshipAvg = grantAvg;
   return facts;
 }
+/** Whether an institution is known to award scholarships or grant aid; undefined when Rasta has no data. */
+export const givesScholarships = (facts?: UniversityFacts): boolean | undefined => facts?.scholarships ?? (facts?.scholarshipPct !== undefined ? facts.scholarshipPct > 0 : undefined);
 export function pkFacts(row: PkRow): UniversityFacts {
   const [, , , province, , sector, category, campuses, established] = row;
   const facts: UniversityFacts = { year: '2026', source: DIRECTORY_SOURCES.Pakistan };
@@ -52,9 +56,9 @@ export const coreFacts: Record<string, UniversityFacts | undefined> = {
   mit: usIndex.has('us-166683') ? usFacts(usIndex.get('us-166683')!) : undefined,
   amherst: usIndex.has('us-164465') ? usFacts(usIndex.get('us-164465')!) : undefined,
   asu: usIndex.has('us-104151') ? usFacts(usIndex.get('us-104151')!) : undefined,
-  nust: { year: '2026', source: DIRECTORY_SOURCES.Pakistan, state: 'Islamabad Capital Territory', control: 'public', category: 'Engineering & Technology', campuses: 'Islamabad; Rawalpindi; Karachi; Risalpur; Quetta', established: '1991' },
-  fast: { year: '2026', source: DIRECTORY_SOURCES.Pakistan, state: 'Punjab', control: 'private', category: 'General', campuses: 'Islamabad; Lahore; Karachi; Peshawar; Chiniot-Faisalabad', established: '2000' },
-  lums: { year: '2026', source: DIRECTORY_SOURCES.Pakistan, state: 'Punjab', control: 'private', category: 'General', campuses: 'Lahore', established: '1985' },
+  nust: { year: '2026', source: DIRECTORY_SOURCES.Pakistan, state: 'Islamabad Capital Territory', control: 'public', category: 'Engineering & Technology', campuses: 'Islamabad; Rawalpindi; Karachi; Risalpur; Quetta', established: '1991', scholarships: true },
+  fast: { year: '2026', source: DIRECTORY_SOURCES.Pakistan, state: 'Punjab', control: 'private', category: 'General', campuses: 'Islamabad; Lahore; Karachi; Peshawar; Chiniot-Faisalabad', established: '2000', scholarships: true },
+  lums: { year: '2026', source: DIRECTORY_SOURCES.Pakistan, state: 'Punjab', control: 'private', category: 'General', campuses: 'Lahore', established: '1985', scholarships: true },
 };
 const coreUsIds = new Set(['us-166683', 'us-164465', 'us-104151']);
 
