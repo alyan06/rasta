@@ -7,7 +7,8 @@ The app contains a real Supabase Google OAuth integration. Device saving, backup
 - Supabase project **`rasta`** (ref `kwlfhxegnyvmzekxexto`, region `ap-south-1` Mumbai) exists and the migration below has been applied: `user_workspaces`, `feedback`, the RLS policies and both RPCs are live.
 - `.env.local` (git-ignored) points the app at that project with its public publishable key, so local builds are "connected".
 - **Still to do by the project owner:** create the Google OAuth client and enable the Google provider in Supabase (steps 1–5 under *Enable Google sign-in*), and add the production site URL + redirect URLs. Until the provider is enabled, pressing *Sign in with Google* redirects to Supabase, which answers "Unsupported provider: provider is not enabled" — nothing is stored.
-- For deployment (e.g. Vercel), set `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` as environment variables in the hosting project; both are public client values.
+- Production builds read the same two public values from the committed `.env.production`, so Vercel needs no environment variables. Live site: https://www.rastapk.com (Vercel; `rastapk.com` redirects to `www`).
+- Google provider enabled 2026-09-18. Supabase Authentication → URL Configuration must list `https://www.rastapk.com/` (Site URL and Redirect URLs); the app returns to `origin + pathname`, so the trailing slash matters.
 
 ## Connect Supabase
 

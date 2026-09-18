@@ -2,7 +2,7 @@
 
 A free university planning workspace for students in Pakistan, built around Matric/FSc and O/A Levels. Explore every HEC-recognised Pakistani university and every four-year US university, see real admission statistics, check your chances with a transparent estimate, plan test scores, organise applications, and develop your own essays.
 
-Built with React, TypeScript and Vite. Everything works in the browser without an account; optional Google sign-in (Supabase) syncs your workspace across devices.
+**Live at [rastapk.com](https://www.rastapk.com).** Built with React, TypeScript and Vite, deployed on Vercel from this repository. Everything works in the browser without an account; optional Google sign-in (Supabase) syncs your workspace across devices.
 
 ## Run locally
 
