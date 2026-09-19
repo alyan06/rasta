@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { COMMON_APP, numbersSubset, postcheckActivity, postcheckEssay, precheckActivity, precheckEssay, wordCount } from './ai-guards';
+import { COMMON_APP, numbersSubset, postcheckActivity, postcheckEssay, precheckActivity, precheckEssay, similarity, wordCount } from './ai-guards';
 
 const activity = 'Led a team of 8 to build a line-following robot; we placed 2nd of 40 teams at the 2025 national final and I ran weekly sessions for juniors.';
 
@@ -44,4 +44,12 @@ test('essay checks bound length both ways and keep the student’s numbers', () 
   assert.equal(postcheckEssay(essay, 'short rewrite', 650)?.code, 'invalid');
   assert.equal(postcheckEssay(essay, `${essay} I was 15 then.`, 650)?.code, 'invented_details');
   assert.equal(postcheckEssay(essay, Array.from({ length: 700 }, (_, i) => filler[i % filler.length]).join(' '), 650)?.code, 'too_long');
+});
+
+test('a near-copy of the student’s text is not accepted as an improvement', () => {
+  const input = 'I led a team of 8 students and we built a line following robot and came 2nd out of 40 teams at the national final.';
+  assert.equal(postcheckActivity(input, `${input} `)?.code, 'invalid');
+  assert.equal(postcheckActivity(input, 'I led a team of 8 students and we built a line-following robot and came 2nd out of 40 teams at the national final')?.code, 'invalid');
+  assert.equal(postcheckActivity(input, 'Captained 8-student team; built line-following robot that placed 2nd of 40 at the national final.'), null);
+  assert.ok(similarity('a b c d', 'a b c d') === 1 && similarity('a b', 'c d') === 0);
 });

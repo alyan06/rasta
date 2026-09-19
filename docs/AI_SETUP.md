@@ -42,7 +42,7 @@ Worst-case daily bill at those ceilings ≈ 300 × $0.0014 + 100 × $0.03 ≈ **
 
 1. **Set the API key** — Supabase dashboard → Edge Functions → Secrets → add `ANTHROPIC_API_KEY`. Until it exists the buttons return "AI help is not switched on yet" and nothing is charged.
 2. Optionally set a **monthly spend limit** in the Anthropic Console as a second ceiling.
-3. Deploy changes to the function with the Supabase CLI (`supabase functions deploy ai`) or the Supabase MCP `deploy_edge_function` tool, uploading `index.ts`, `guards.ts` and `deno.json`.
+3. Deploy changes to the function with the Supabase CLI (`supabase functions deploy ai`) or the Supabase MCP `deploy_edge_function` tool, uploading `index.ts`, `guards.ts` and `deno.json` and passing `import_map_path: "deno.json"` (omitting it on a redeploy makes the platform reuse a stale absolute path and fail).
 
 ## Monitoring
 

@@ -27,6 +27,19 @@ export function numbersSubset(input: string, output: string): boolean {
   return numberTokens(output).every(token => known.has(token));
 }
 
+const wordSet = (text: string) => new Set(text.toLowerCase().match(/[a-z0-9؀-ۿ']+/g) ?? []);
+/** Word-level Dice similarity in [0, 1]: 1 means the same words, 0 means nothing in common. */
+export function similarity(a: string, b: string): number {
+  const left = wordSet(a), right = wordSet(b);
+  if (!left.size && !right.size) return 1;
+  let shared = 0;
+  for (const word of left) if (right.has(word)) shared += 1;
+  return (2 * shared) / (left.size + right.size);
+}
+/** A rewrite that keeps almost every word is not a rewrite. */
+export const TOO_SIMILAR = 0.85;
+export const tooSimilar = (input: string, output: string) => output.trim() === input.trim() || similarity(input, output) > TOO_SIMILAR;
+
 export interface PreCheckFailure { code: 'invalid' | 'unsafe'; message: string }
 export function precheckActivity(description: string): PreCheckFailure | null {
   const text = description.trim();
@@ -48,7 +61,8 @@ export function precheckEssay(content: string, wordLimit: number): PreCheckFailu
 export interface PostCheckFailure { code: 'invented_details' | 'too_long' | 'invalid'; message: string }
 export function postcheckActivity(input: string, improved: string): PostCheckFailure | null {
   const text = improved.trim();
-  if (!text || text === input.trim()) return { code: 'invalid', message: 'The suggestion was empty or unchanged.' };
+  if (!text) return { code: 'invalid', message: 'The suggestion was empty.' };
+  if (tooSimilar(input, text)) return { code: 'invalid', message: 'The AI could not find much to improve; your description already reads well. Try adding what came of it, or a number.' };
   if (text.length > COMMON_APP.description) return { code: 'too_long', message: 'The suggestion ran past 150 characters.' };
   if (urlPattern.test(text)) return { code: 'invalid', message: 'The suggestion contained a link.' };
   if (!numbersSubset(input, text)) return { code: 'invented_details', message: 'The suggestion added a number that was not in your description, so it was discarded.' };
