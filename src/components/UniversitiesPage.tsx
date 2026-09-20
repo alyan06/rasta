@@ -94,7 +94,7 @@ export default function UniversitiesPage({ data, update, navigate, notify }: Wor
   return <div className="universities-page stack">
     <header className="page-heading"><span className="page-kicker">Find your next chapter</span><h1>Explore universities</h1><p>Every HEC-recognised university in Pakistan and every four-year US university. Open one to see its numbers and check your chances.</p></header>
     <div className="catalogue-summary"><span><strong>{catalogueCoverage.Pakistan.toLocaleString()}</strong> in Pakistan</span><span><strong>{catalogueCoverage.USA.toLocaleString()}</strong> in the USA</span><span><strong>{catalogueCoverage.withAdmissionsData.toLocaleString()}</strong> with admit rates &amp; scores</span></div>
-    <div className="filter-toolbar">
+    <div className="filter-toolbar" data-tour="explore">
       <label className="search-field"><MagnifyingGlass size={20} /><input aria-label="Search universities" placeholder="Search by university, city or state" value={query} onChange={event => { setQuery(event.target.value); reset(); }} /></label>
       <select className="filter-select" aria-label="Destination" value={country} onChange={event => { setCountry(event.target.value); setRegion('all'); reset(); }}><option value="all">Pakistan &amp; USA</option><option>Pakistan</option><option>USA</option></select>
       <select className="filter-select" aria-label="Sort" value={sort} onChange={event => setSort(event.target.value as Sort)}><option value="relevance">Best match first</option><option value="selective">Most selective first</option><option value="open">Easiest to get into first</option><option value="largest">Largest first</option><option value="cheapest">Lowest tuition first</option><option value="name">A to Z</option></select>

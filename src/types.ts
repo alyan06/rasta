@@ -134,6 +134,8 @@ export interface AppData {
   applications: Application[];
   essays: EssayDraft[];
   onboardingCompleted?: boolean;
+  /** The guided tour has been seen (or skipped). Saved with the account so it shows once, on any device. */
+  tourCompleted?: boolean;
 }
 export interface WorkspaceProps {
   data: AppData;
@@ -145,4 +147,6 @@ export interface WorkspaceProps {
   signedIn?: boolean;
   /** Opens the account dialog so a page can offer sign-in in context. */
   openAccount?: () => void;
+  /** Replays the guided tour of the workspace. */
+  startTour?: () => void;
 }

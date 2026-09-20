@@ -141,7 +141,7 @@ export default function EssaysPage({
 
   return (
     <div className="essays-page">
-      <div className="page-heading">
+      <div className="page-heading" data-tour="essays">
         <div>
           <span className="eyebrow">YOUR STORY, IN YOUR WORDS</span>
           <h1>

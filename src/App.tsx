@@ -1,11 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import {
-  House,
-  UserCircle,
-  Buildings,
-  ChartLineUp,
-  NotePencil,
-  Checks,
   Compass,
   ArrowUpRight,
   CheckCircle,
@@ -41,16 +35,9 @@ import { useTheme } from "./hooks/useTheme";
 import ThemeToggle from "./components/ThemeToggle";
 import { useCloudAccount } from "./hooks/useCloudAccount";
 import { universities } from "./lib/admissions";
+import { navigation } from "./lib/navigation";
+import Tour from "./components/Tour";
 
-const navigation = [
-  { id: "dashboard", label: "Dashboard", icon: House },
-  { id: "profile", label: "My profile", icon: UserCircle },
-  { id: "universities", label: "Universities", icon: Buildings },
-  { id: "planner", label: "Score planner", icon: ChartLineUp },
-  { id: "essays", label: "Essay studio", icon: NotePencil },
-  { id: "applications", label: "My applications", icon: Checks },
-  { id: "guide", label: "How to apply", icon: Compass },
-] as const;
 function currentPage(): Page {
   const id = window.location.hash.slice(1);
   if (
@@ -206,6 +193,32 @@ export default function App() {
     !data.onboardingCompleted &&
     !data.profile.onboardingCompleted &&
     data.profile.isDemo;
+  // The guided tour opens once per account: the first time a signed-in workspace
+  // is loaded without the flag. Anyone can replay it from How to apply or the account dialog.
+  const [tourOpen, setTourOpen] = useState(false);
+  const legalPage = ["privacy", "terms", "contact"].includes(page);
+  const tourDue =
+    !!account.user &&
+    (account.status === "synced" || account.status === "saving") &&
+    scope === account.user.id &&
+    !showOnboarding &&
+    !legalPage &&
+    !data.tourCompleted;
+  useEffect(() => {
+    if (!tourDue) return;
+    accountDialog.current?.close();
+    dialog.current?.close();
+    setTourOpen(true);
+  }, [tourDue]);
+  useEffect(() => {
+    setTourOpen(false);
+  }, [scope]);
+  const startTour = useCallback(() => {
+    accountDialog.current?.close();
+    dialog.current?.close();
+    setMenuOpen(false);
+    setTourOpen(true);
+  }, []);
   const previousAccountStatus = useRef(account.status);
   useEffect(() => {
     if (account.status === "choice" || account.status === "conflict")
@@ -312,6 +325,7 @@ export default function App() {
     storageAvailable: !storageError,
     signedIn: !!account.user,
     openAccount: () => accountDialog.current?.showModal(),
+    startTour,
   };
   const PageComponent = (
     {
@@ -361,7 +375,7 @@ export default function App() {
           }}
         />
       )}
-      <div className="app-shell" hidden={showOnboarding}>
+      <div className="app-shell" hidden={showOnboarding} inert={tourOpen}>
         <a
           className="skip-link"
           href="#main-content"
@@ -414,7 +428,7 @@ export default function App() {
           </a>
           <div className="sidebar-caption">A way forward, together.</div>
           <div className="workspace-label">Your workspace</div>
-          <nav>
+          <nav data-tour="menu">
             {navigation.map(({ id, label, icon: Icon }) => (
               <a
                 key={id}
@@ -473,6 +487,7 @@ export default function App() {
             <div className="breadcrumb">
               <button
                 className="icon-button mobile-menu"
+                data-tour="menu-button"
                 ref={menuButton}
                 aria-controls="workspace-navigation"
                 aria-label="Open navigation"
@@ -486,7 +501,7 @@ export default function App() {
               </span>
               <strong>{pageLabel}</strong>
             </div>
-            <div className="topbar-right">
+            <div className="topbar-right" data-tour="account">
               <ThemeToggle theme={theme} setTheme={setTheme} compact />
               {(storageError || account.status === "error") && (
                 <span className="device-status attention">
@@ -843,8 +858,24 @@ export default function App() {
             <X size={20} />
           </button>
         </div>
-        <AccountPanel account={account} />
+        <AccountPanel account={account} onTour={startTour} />
       </dialog>
+      {tourOpen && !showOnboarding && (
+        <Tour
+          page={page}
+          mobile={mobile}
+          firstName={
+            data.profile.isDemo ? "" : data.profile.name.trim().split(" ")[0]
+          }
+          email={account.user?.email ?? ""}
+          universityId={data.saved[0] ?? "nust"}
+          navigate={navigate}
+          onClose={() => {
+            setTourOpen(false);
+            if (!data.tourCompleted) update({ tourCompleted: true });
+          }}
+        />
+      )}
     </>
   );
 }

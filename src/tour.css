@@ -1,0 +1,80 @@
+/* Guided tour: a spotlight cut out of a dimmed page, with a card beside it (or a bottom sheet on phones). */
+:root { --tour-dim: oklch(0.14 0.01 345 / 0.58); --tour-ring: oklch(0.6 0.16 350 / 0.95); --tour-shadow: oklch(0 0 0 / 0.28); --z-tour: 50; }
+:root[data-theme=dark] { --tour-dim: oklch(0.06 0.01 345 / 0.7); --tour-ring: oklch(0.8 0.13 350 / 0.95); --tour-shadow: oklch(0 0 0 / 0.55); }
+
+.tour-root { position: fixed; inset: 0; z-index: var(--z-tour); }
+.tour-backdrop { position: fixed; inset: 0; background: var(--tour-dim); animation: tour-fade 240ms ease-out; }
+.tour-hole {
+  position: fixed;
+  border-radius: 12px;
+  box-shadow: 0 0 0 3px var(--tour-ring), 0 0 0 200vmax var(--tour-dim);
+  pointer-events: none;
+  transition: top 320ms cubic-bezier(.23, 1, .32, 1), left 320ms cubic-bezier(.23, 1, .32, 1), width 320ms cubic-bezier(.23, 1, .32, 1), height 320ms cubic-bezier(.23, 1, .32, 1);
+}
+.tour-layer { position: fixed; inset: 0; pointer-events: none; }
+.tour-layer.centered { display: grid; place-items: center; padding: 16px; }
+.tour-card {
+  pointer-events: auto;
+  position: relative;
+  width: min(400px, calc(100vw - 32px));
+  max-height: calc(100dvh - 32px);
+  background: var(--bg);
+  color: var(--ink);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px 22px 20px;
+  box-shadow: 0 24px 60px var(--tour-shadow);
+  display: grid;
+  gap: 12px;
+  animation: tour-card-in 260ms cubic-bezier(.23, 1, .32, 1);
+}
+/* Anchored cards keep overflow visible so the caret can sit outside the box; centered cards and sheets scroll instead. */
+.tour-layer.centered .tour-card, .tour-layer.sheet .tour-card { overflow: auto; }
+.tour-card.anchored { position: fixed; transition: top 320ms cubic-bezier(.23, 1, .32, 1), left 320ms cubic-bezier(.23, 1, .32, 1); }
+.tour-caret { position: absolute; width: 16px; height: 16px; background: var(--bg); border: 1px solid var(--border); transform: rotate(45deg); }
+.tour-card[data-placement=bottom] .tour-caret { top: -9px; left: calc(var(--caret) - 8px); border-right: 0; border-bottom: 0; }
+.tour-card[data-placement=top] .tour-caret { bottom: -9px; left: calc(var(--caret) - 8px); border-left: 0; border-top: 0; }
+.tour-card[data-placement=right] .tour-caret { left: -9px; top: calc(var(--caret) - 8px); border-right: 0; border-top: 0; }
+.tour-card[data-placement=left] .tour-caret { right: -9px; top: calc(var(--caret) - 8px); border-left: 0; border-bottom: 0; }
+.tour-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.tour-count { font-size: .72rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--primary); }
+.tour-skip { width: 32px; height: 32px; margin: -6px -8px -6px 0; border: 0; border-radius: 8px; background: transparent; color: var(--muted); display: inline-flex; align-items: center; justify-content: center; }
+.tour-skip:hover { background: var(--surface); color: var(--ink); }
+.tour-progress { height: 4px; border-radius: 4px; background: var(--surface); overflow: hidden; }
+.tour-progress i { display: block; height: 100%; border-radius: 4px; background: var(--primary); transition: width 320ms cubic-bezier(.23, 1, .32, 1); }
+.tour-content { display: grid; gap: 12px; animation: tour-fade 220ms ease-out; }
+.tour-heading { display: flex; align-items: flex-start; gap: 12px; margin-top: 4px; }
+.tour-icon { flex-shrink: 0; width: 40px; height: 40px; border-radius: 11px; background: var(--tint); color: var(--primary); display: inline-flex; align-items: center; justify-content: center; }
+.tour-heading h2 { font-size: 1.12rem; line-height: 1.35; letter-spacing: -.02em; padding-top: 7px; outline: 0; }
+.tour-body { display: grid; gap: 8px; }
+.tour-body p { font-size: .88rem; line-height: 1.7; }
+.tour-body strong { color: var(--ink); font-weight: 600; }
+.tour-sections { list-style: none; margin: 2px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 12px; }
+.tour-sections li { display: flex; align-items: center; gap: 7px; font-size: .78rem; color: var(--ink); padding: 6px 8px; background: var(--surface); border-radius: 7px; white-space: nowrap; }
+.tour-sections svg { color: var(--primary); }
+.tour-where { display: flex; align-items: center; gap: 8px; font-size: .78rem; color: var(--muted); padding: 9px 12px; border: 1px dashed var(--border); border-radius: 9px; }
+.tour-where svg { color: var(--primary); flex-shrink: 0; }
+.tour-where strong { color: var(--ink); font-weight: 600; }
+.tour-actions { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 4px; }
+.tour-actions .button { white-space: nowrap; }
+.tour-actions .button:last-child { margin-left: auto; }
+
+/* Phones and small tablets: the card is a sheet at the bottom, and the spotlight scrolls into the upper half. */
+@media (max-width: 800px) {
+  .tour-layer.sheet { display: block; padding: 0; }
+  /* The sheet is a column: header and buttons stay put, the middle scrolls if a step is long. */
+  .tour-layer.sheet .tour-card { position: fixed; left: 10px; right: 10px; bottom: calc(10px + env(safe-area-inset-bottom)); top: auto; width: auto; max-height: min(62dvh, 540px); padding: 16px 18px calc(16px + env(safe-area-inset-bottom) / 2); border-radius: 16px; display: flex; flex-direction: column; overflow: hidden; animation: tour-sheet-in 300ms cubic-bezier(.23, 1, .32, 1); }
+  .tour-layer.sheet .tour-content { flex: 1 1 auto; min-height: 0; overflow: auto; overscroll-behavior: contain; }
+  .tour-layer.sheet .tour-actions { flex-shrink: 0; }
+  .tour-heading h2 { font-size: 1.05rem; }
+  .tour-body p { font-size: .86rem; }
+  .tour-actions .button { flex: 1; }
+  .tour-actions .button:last-child { margin-left: 0; }
+  .tour-sections { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 340px) { .tour-sections { grid-template-columns: 1fr; } }
+
+@keyframes tour-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes tour-card-in { from { opacity: 0; transform: translateY(8px) scale(.985); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes tour-sheet-in { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { .tour-hole, .tour-card, .tour-card.anchored, .tour-backdrop, .tour-content, .tour-progress i { animation: none; transition: none; } }

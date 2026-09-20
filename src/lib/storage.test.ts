@@ -465,6 +465,8 @@ test('new education fields are optional for legacy exports but strictly validate
     assert.equal(isAppData({ ...complete, profile: { ...complete.profile, ...patch } }), false, JSON.stringify(patch));
   }
   assert.equal(isAppData({ ...complete, onboardingCompleted: 'true' }), false);
+  assert.equal(isAppData({ ...complete, tourCompleted: true }), true);
+  assert.equal(isAppData({ ...complete, tourCompleted: 'yes' }), false);
   assert.equal(isAppData({ ...complete, profile: { ...complete.profile, familyIncome: '', predictedHssc: '' } }), true);
 });
 

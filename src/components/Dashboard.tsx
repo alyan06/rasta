@@ -73,7 +73,7 @@ export default function Dashboard({ data, navigate }: WorkspaceProps) {
           My profile <ArrowUpRight size={17} />
         </button>
       </div>
-      <section className="journey-strip" aria-label="Your university journey">
+      <section className="journey-strip" aria-label="Your university journey" data-tour="journey">
         {steps.map((step, i) => (
           <button
             key={step.title}

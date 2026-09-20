@@ -1,22 +1,6 @@
-import { test, expect, type Page } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
-import { seedSample } from './helpers';
-
-/** A fake signed-in session plus stubbed Supabase endpoints, so the AI flow can be exercised without a backend. */
-async function stubSignedIn(page: Page) {
-  const encode = (value: object) => Buffer.from(JSON.stringify(value)).toString('base64url');
-  const expiresAt = Math.floor(Date.now() / 1000) + 3600;
-  const userId = '11111111-2222-4333-8444-555555555555';
-  const token = `${encode({ alg: 'HS256', typ: 'JWT' })}.${encode({ sub: userId, role: 'authenticated', aud: 'authenticated', exp: expiresAt, email: 'student@example.com' })}.sig`;
-  const user = { id: userId, aud: 'authenticated', role: 'authenticated', email: 'student@example.com', app_metadata: { provider: 'google' }, user_metadata: {}, created_at: '2026-09-18T00:00:00Z' };
-  await page.addInitScript(({ key, session }) => localStorage.setItem(key, JSON.stringify(session)), { key: 'sb-kwlfhxegnyvmzekxexto-auth-token', session: { access_token: token, token_type: 'bearer', expires_in: 3600, expires_at: expiresAt, refresh_token: 'stub', user } });
-  await page.route('**/auth/v1/user', route => route.fulfill({ json: user }));
-  await page.route('**/rest/v1/user_workspaces*', route => route.fulfill({ json: [] }));
-  await page.route('**/rest/v1/rpc/save_workspace', async route => {
-    const body = route.request().postDataJSON() as { p_payload: unknown };
-    await route.fulfill({ json: { payload: body.p_payload, revision: 1, updated_at: new Date().toISOString() } });
-  });
-}
+import { seedSample, stubSignedIn } from './helpers';
 
 const activity = { id: 'a1', title: 'Robotics team', type: 'Technology', role: 'Captain', organization: 'School', description: 'I led a team of 8 students and we built a line following robot and came 2nd out of 40 teams at the national final.', startDate: '2024-01-01', endDate: '', ongoing: true, hoursPerWeek: 8, weeksPerYear: 40 };
 const essayText = Array.from({ length: 30 }, () => 'When the monsoon flooded our street I learned that nobody was coming, so my cousins and I carried water out with buckets.').join(' ');
@@ -31,7 +15,7 @@ test('improve with AI shows a suggestion apart from the text; keep replaces it, 
     if (/help me get into/i.test(body.activity?.description ?? '')) return route.fulfill({ status: 422, json: { error: { code: 'not_an_activity', message: 'That doesn’t read like an activity. Describe what you did, your role and what came of it, then try again.' } } });
     return route.fulfill({ json: { verdict: 'ok', improved: 'Captained 8-student team; built line-following robot that placed 2nd of 40 at the national final.', remaining: 4 } });
   });
-  await seedSample(page, { profile: { isDemo: false, name: 'Hamza', activityEntries: [activity] } });
+  await seedSample(page, { tourCompleted: true, profile: { isDemo: false, name: 'Hamza', activityEntries: [activity] } });
   await page.goto('/#profile');
   const editor = page.locator('.activity-editor').first();
   const description = editor.getByLabel(/Description/);
@@ -78,7 +62,7 @@ test('polish with AI in the essay studio and a quota refusal', async ({ page }) 
     if (polishes > 1) return route.fulfill({ status: 429, json: { error: { code: 'quota', message: 'used up', reason: 'user', remaining: 0 } } });
     return route.fulfill({ json: { verdict: 'ok', polished: essayText.replace('nobody was coming', 'no one was coming'), changes: ['Tightened the opening sentence.'], words: 600, remaining: 0 } });
   });
-  await seedSample(page, { profile: { isDemo: false, name: 'Hamza' }, essays: [{ id: 'e1', title: 'Monsoon', prompt: 'Tell a story.', content: essayText, updatedAt: '2026-09-18T00:00:00.000Z', wordLimit: 650 }] });
+  await seedSample(page, { tourCompleted: true, profile: { isDemo: false, name: 'Hamza' }, essays: [{ id: 'e1', title: 'Monsoon', prompt: 'Tell a story.', content: essayText, updatedAt: '2026-09-18T00:00:00.000Z', wordLimit: 650 }] });
   await page.goto('/#essays');
   await expect(page.locator('.ai-assist-note')).toContainText('1 left today');
   await page.getByRole('button', { name: 'Polish with AI' }).click();

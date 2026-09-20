@@ -3,6 +3,7 @@ import {
   ArrowRight,
   BookOpen,
   CheckCircle as CheckCircle2,
+  Compass,
   ArrowSquareOut as ExternalLink,
   HandHeart as HeartHandshake,
   Lightbulb,
@@ -174,7 +175,7 @@ const sources: Record<
   ],
 };
 
-export default function GuidePage({ navigate }: WorkspaceProps) {
+export default function GuidePage({ navigate, startTour }: WorkspaceProps) {
   const [tab, setTab] = useState<GuideTab>("pakistan");
   const guide = guides[tab];
   return (
@@ -187,9 +188,19 @@ export default function GuidePage({ navigate }: WorkspaceProps) {
             A clear starting point for the things nobody explains at school.
           </p>
         </div>
+        {startTour && (
+          <button
+            type="button"
+            className="button secondary"
+            onClick={startTour}
+          >
+            <Compass size={18} /> Take the tour
+          </button>
+        )}
       </header>
       <div
         className="segmented-control guide-tabs"
+        data-tour="guide"
         role="group"
         aria-label="Choose an application guide"
       >

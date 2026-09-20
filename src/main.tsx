@@ -9,6 +9,7 @@ import "./styles.css";
 import "./v2.css";
 import "./universities.css";
 import "./chances.css";
+import "./tour.css";
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <App />

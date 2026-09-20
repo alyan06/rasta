@@ -36,6 +36,7 @@ The production build is written to `dist/`. Preview serves that build locally. T
 | Essay studio | Multiple drafts, practice/custom prompts, guided story notes, outlines built from those notes, 250/500/650-word targets, text export, and local writing checks. |
 | Applications | Per-university steps, preparation status, notes, and manually entered deadlines. |
 | Admissions guide | Pakistan, USA, and IBCC application guidance with official links. |
+| Guided tour | The first time an account’s workspace loads (after onboarding), a 12-step spotlight tour walks through the real pages: the menu, dashboard, profile, explorer, a university’s **Check my chances**, planner, essays, applications, guide, and account/data. Seen once per account (`tourCompleted` syncs with the workspace); replay from **How to apply → Take the tour** or the account dialog. On phones it is a bottom sheet with the highlighted control scrolled into the top half. |
 
 Six entries — **NUST, FAST–NUCES, LUMS, MIT, Amherst College, and Arizona State University** — have hand-reviewed requirements, formulas and application steps. Every other entry is built from public registries by `scripts/build-catalogue.mjs`: the HEC recognised-institution list plus each HEC page’s facts (website, sector, province, campuses, year) for Pakistan, and NCES IPEDS HD2024 / ADM2023 / DRVEF2023 / IC2023_AY for the USA. Programme lists are only verified for the six reviewed entries.
 
@@ -88,7 +89,7 @@ Unit tests cover admissions calculations, writing checks, and storage validation
 
 ## Project map
 
-- `src/components/` — the workspace views, onboarding, university explorer and detail page.
+- `src/components/` — the workspace views, onboarding, guided tour (`Tour.tsx`, anchored to `data-tour` attributes), university explorer and detail page.
 - `src/lib/admissions.ts` — the six reviewed universities and the aggregate calculators.
 - `src/lib/catalogue.ts` + `src/data/catalogue.json` — the full directory with IPEDS/HEC facts.
 - `src/lib/chancing.ts` — the chance estimate, bands and wishlist test plans.

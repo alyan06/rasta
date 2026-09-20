@@ -197,6 +197,7 @@ export function isAppData(value: unknown): value is AppData {
   if (!object(value) || value.version !== 1 || !validProfile(value.profile))
     return false;
   if (value.onboardingCompleted !== undefined && typeof value.onboardingCompleted !== 'boolean') return false;
+  if (value.tourCompleted !== undefined && typeof value.tourCompleted !== 'boolean') return false;
   return (
     uniqueArray(
       value.saved,

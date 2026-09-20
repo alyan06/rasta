@@ -16,7 +16,7 @@ function description(data: AppData): string {
   return `${name} · ${data.saved.length} saved universities · ${data.essays.length} essay drafts`;
 }
 
-export default function AccountPanel({ account }: { account: CloudAccount }) {
+export default function AccountPanel({ account, onTour }: { account: CloudAccount; onTour?: () => void }) {
   const choosing = account.status === "choice" || account.status === "conflict";
   const busy = account.status === "loading" || account.status === "saving";
   return (
@@ -150,6 +150,14 @@ export default function AccountPanel({ account }: { account: CloudAccount }) {
               Everything you change saves to your Google account automatically,
               so you see the same progress wherever you sign in. On a shared
               device, sign out when you finish.
+              {onTour && (
+                <>
+                  {" "}
+                  <button type="button" className="text-button" onClick={onTour}>
+                    Show me around again
+                  </button>
+                </>
+              )}
             </p>
           )}
           <div className="button-row">

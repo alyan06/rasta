@@ -97,7 +97,7 @@ export default function ApplicationsPage({
           {submitted} of {data.applications.length} submitted
         </span>
       </header>
-      <section className="panel application-add">
+      <section className="panel application-add" data-tour="applications">
         <div className="panel-header">
           <div>
             <h2>Where are you applying?</h2>
