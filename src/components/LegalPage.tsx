@@ -78,9 +78,23 @@ export default function LegalPage({
                 Google and Supabase process information needed for their
                 respective sign-in and storage services. Their own policies
                 apply to those services. University links lead to external
-                websites. Rasta does not include advertising or analytics
-                tracking in this beta, and essay drafts are not sent to an AI
-                service.
+                websites. Rasta carries no advertising and no third-party
+                tracking or profiling, and never sells or shares your
+                information.
+              </p>
+              <p>
+                To know whether Rasta is reaching students, our host Vercel
+                counts visits with Vercel Web Analytics. It records which page
+                was opened, the site you arrived from, your country, and your
+                device type — never your name, grades, activities, essays or
+                email. It sets no cookies and does not follow you to other
+                websites. Visitors are counted with an identifier that Vercel
+                derives from the request and rotates every day, so it cannot be
+                used to recognise you later. Pages are reported as plain names
+                such as “/profile”, or “/university/nust” for a university in
+                the catalogue, so we can see which sections students use. That
+                is the whole of it: no scores, no text you wrote, nothing that
+                identifies you.
               </p>
               <p>
                 University logos are loaded from each institution’s own website

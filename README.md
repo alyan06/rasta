@@ -50,6 +50,15 @@ A **chance** is a transparent estimate, not a prediction of a decision. For holi
 
 Essay outlines assemble the student’s own notes and mark missing details. **Writing checks are deterministic local rules**, covering length, long sentences, broad claims, reflection cues, repetition, and unfinished outline notes. They are not generative AI or an assessment of admission chances. The practice prompts are examples; students must verify the prompt and writing rules in their actual application.
 
+## Visitor measurement
+
+Vercel Web Analytics counts visits, through `@vercel/analytics` in `src/App.tsx`. Two things make it work here that would otherwise be silent failures:
+
+- **It must be switched on for the project** in the Vercel dashboard (project → Analytics → Enable). The package alone does nothing: `/_vercel/insights/script.js` 404s until Vercel serves it.
+- **Hash routing needs explicit routes.** Every URL is `/`, and the tracker's automatic mode only watches the History API, so it would report one row for the whole site. `pageRoute()` in `src/lib/analytics.ts` maps the page to a `route`/`path` pair; passing `route` turns off automatic tracking and sends one pageview per navigation. Universities share a `/university/[id]` route so the catalogue is one row rather than 2,841, while the path keeps the individual university.
+
+It is cookieless and carries no profile, grades, essay text or email — only the page name, referrer, country and device, as the [privacy policy](src/components/LegalPage.tsx) states. Signed-in **account** numbers are not in Vercel Analytics; they live in Supabase (`auth.users`).
+
 ## Data and backups
 
 Workspace data is stored in this browser’s `localStorage` under `rasta.workspace.v1`. With Supabase configured, **Sign in with Google** syncs the workspace to your account (see [docs/AUTH_SETUP.md](docs/AUTH_SETUP.md)); otherwise clearing site data or moving to another browser can remove access to your workspace. Nothing is ever submitted to a university.
@@ -85,7 +94,7 @@ npx playwright install chromium
 npm run test:e2e
 ```
 
-Unit tests cover admissions calculations, writing checks, and storage validation/recovery. Playwright covers core browser workflows, persistence, backups, and mobile layout. Its configuration starts the Vite development server on port 5173 or reuses an existing one. If Chromium is already installed elsewhere, set `RASTA_BROWSER_PATH` to its executable instead of installing Playwright’s browser.
+Unit tests cover admissions calculations, writing checks, storage validation/recovery, and analytics route mapping. Playwright covers core browser workflows, persistence, backups, and mobile layout. Its configuration starts the Vite development server on port 5173 or reuses an existing one. If Chromium is already installed elsewhere, set `RASTA_BROWSER_PATH` to its executable instead of installing Playwright’s browser.
 
 ## Project map
 

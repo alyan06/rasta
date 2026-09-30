@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import {
   Compass,
   ArrowUpRight,
@@ -36,6 +37,7 @@ import ThemeToggle from "./components/ThemeToggle";
 import { useCloudAccount } from "./hooks/useCloudAccount";
 import { universities } from "./lib/admissions";
 import { navigation } from "./lib/navigation";
+import { pageRoute, stripFragment } from "./lib/analytics";
 import Tour from "./components/Tour";
 
 function currentPage(): Page {
@@ -352,8 +354,12 @@ export default function App() {
         </button>
       </div>
     ) : null;
+  const { route, path } = pageRoute(page);
   return (
     <>
+      {/* Cookieless page counts. Nothing from the profile, essays or account is sent:
+          only the route above, which is derived from the hash and never holds student data. */}
+      <Analytics route={route} path={path} beforeSend={stripFragment} />
       {showOnboarding && cloudWarning}
       {showOnboarding && (
         <Onboarding
